@@ -1,0 +1,23 @@
+<%= tinymce_assets %>
+<div class="new-story-container">
+  <div class="form-container">
+    <h1 id="form-title">Write Your Story</h1>
+    <form action="<%= stories_url %>" method="POST" id="the-form">
+      <div>
+        <label>Titile</label>
+        <input type="text" name="story[title]">
+      </div>
+      <div>
+        <label>Tag </label>
+        <input type="text" name="story[tag]">
+      </div>
+      <div class="tinymce-container">
+          <%= text_area_tag "story[body]","", :class => "tinymce" %>
+          <%= tinymce %>
+      </div>
+      <div>
+        <button id="submit-btn">Publish</button>
+      </div>
+    </form>
+  </div>
+</div>
