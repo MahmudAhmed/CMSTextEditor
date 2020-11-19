@@ -16994,3 +16994,620 @@ Completed 200 OK in 150ms (Views: 137.7ms | ActiveRecord: 6.8ms)
   ↳ db/seeds.rb:11
   [1m[36mNewsletter Destroy (2.0ms)[0m  [1m[31mDELETE FROM "newsletters"[0m
   ↳ db/seeds.rb:12
+Started GET "/newsletters" for ::1 at 2020-11-19 17:41:02 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vault/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 617ms (Views: 576.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:41:09 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 181ms (Views: 149.8ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for ::1 at 2020-11-19 17:41:12 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 218ms (Views: 213.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 17:45:08 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (4.8ms)
+  Rendered stories/new.html.erb within layouts/application (138.8ms)
+Completed 200 OK in 292ms (Views: 200.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:45:11 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 228ms (Views: 220.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:45:12 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 133ms (Views: 125.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:45:17 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 213ms (Views: 209.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:45:19 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 253ms (Views: 247.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:45:22 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 230ms (Views: 226.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:45:26 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 231ms (Views: 225.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:01:28 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 165ms (Views: 159.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:01:32 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 237ms (Views: 229.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2020-11-19 18:02:57 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 192ms (Views: 189.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:03:53 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (9.2ms)
+  Rendered stories/new.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 239ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stories" for ::1 at 2020-11-19 18:07:06 -0500
+Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"title"=>"J.Cole", "tag"=>"Greatest of all time", "body"=>"<p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 LIMIT $2[0m  [["title", "J.Cole"], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/stories_controller.rb:24
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (3.9ms)
+  Rendered stories/new.html.erb within layouts/application (18.8ms)
+Completed 422 Unprocessable Entity in 90ms (Views: 75.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/stories" for ::1 at 2020-11-19 18:08:10 -0500
+Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"title"=>"J.Cole", "tag"=>"Goat", "body"=>"<p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 LIMIT $2[0m  [["title", "J.Cole"], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Create (13.1ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "tag", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "J.Cole"], ["body", "<p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>"], ["tag", "Goat"], ["created_at", "2020-11-19 23:08:10.298665"], ["updated_at", "2020-11-19 23:08:10.298665"]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 AND "stories"."id" != $2 LIMIT $3[0m  [["title", "J.Cole"], ["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Update (2.7ms)[0m  [1m[33mUPDATE "stories" SET "tag" = $1, "updated_at" = $2, "lyraID" = $3, "published_date" = $4 WHERE "stories"."id" = $5[0m  [["tag", "GOAT"], ["updated_at", "2020-11-19 23:08:10.757047"], ["lyraID", "gmfjwZn7vSMGN8vHf1SwpWEa"], ["published_date", "November 19, 2020"], ["id", 46]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:38
+Redirected to http://localhost:3000/stories/46
+Completed 302 Found in 497ms (ActiveRecord: 32.6ms)
+
+
+Started GET "/stories/46" for ::1 at 2020-11-19 18:08:10 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStory Load (2.3ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:13
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 200ms (Views: 140.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:09:03 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (1.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 119ms (Views: 113.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:09:14 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (12.1ms)
+  Rendered stories/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 213ms (Views: 210.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:09:28 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (1.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 159ms (Views: 152.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stories/46/edit" for ::1 at 2020-11-19 18:09:29 -0500
+Processing by StoriesController#edit as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStory Load (3.4ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:47
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (13.6ms)
+  Rendered stories/edit.html.erb within layouts/application (124.6ms)
+Completed 200 OK in 294ms (Views: 269.3ms | ActiveRecord: 4.2ms)
+
+
+Started PATCH "/stories/46" for ::1 at 2020-11-19 18:11:09 -0500
+Processing by StoriesController#update as HTML
+  Parameters: {"story"=>{"title"=>"The Warm Up - J. Cole", "tag"=>"GOAT", "body"=>"<p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>"}, "id"=>"46"}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:53
+  [1m[36mStory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 AND "stories"."id" != $2 LIMIT $3[0m  [["title", "The Warm Up - J. Cole"], ["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:53
+  [1m[36mStory Update (2.7ms)[0m  [1m[33mUPDATE "stories" SET "title" = $1, "updated_at" = $2 WHERE "stories"."id" = $3[0m  [["title", "The Warm Up - J. Cole"], ["updated_at", "2020-11-19 23:11:09.332216"], ["id", 46]]
+  ↳ app/controllers/stories_controller.rb:53
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:53
+Redirected to http://localhost:3000/stories/46
+Completed 302 Found in 190ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/stories/46" for ::1 at 2020-11-19 18:11:09 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStory Load (2.2ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:13
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 191ms (Views: 171.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:11:40 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (2.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 272ms (Views: 265.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:11:49 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (9.2ms)
+  Rendered stories/new.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 290ms (Views: 287.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stories" for ::1 at 2020-11-19 18:12:56 -0500
+Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"title"=>"Ultimate Fighting Championship (UFC)", "tag"=>"MMA", "body"=>"<p>The&nbsp;<strong>Ultimate Fighting Championship</strong>&nbsp;(<strong>UFC</strong>) is an American&nbsp;<a title=\"Mixed martial arts\" href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts\">mixed martial arts</a>&nbsp;(MMA)&nbsp;<a title=\"Promoter (entertainment)\" href=\"https://en.wikipedia.org/wiki/Promoter_(entertainment)\">promotion company</a>&nbsp;based in&nbsp;<a title=\"Las Vegas\" href=\"https://en.wikipedia.org/wiki/Las_Vegas\">Las Vegas</a>,&nbsp;<a title=\"Nevada\" href=\"https://en.wikipedia.org/wiki/Nevada\">Nevada</a>, which is owned and operated by&nbsp;<a class=\"mw-redirect\" title=\"Endeavor Group Holdings\" href=\"https://en.wikipedia.org/wiki/Endeavor_Group_Holdings\">Endeavor Group Holdings</a>&nbsp;along with&nbsp;<a class=\"mw-redirect\" title=\"Silver Lake Partners\" href=\"https://en.wikipedia.org/wiki/Silver_Lake_Partners\">Silver Lake Partners</a>,&nbsp;<a title=\"Kohlberg Kravis Roberts\" href=\"https://en.wikipedia.org/wiki/Kohlberg_Kravis_Roberts\">Kohlberg Kravis Roberts</a>&nbsp;and&nbsp;<a title=\"MSD Capital\" href=\"https://en.wikipedia.org/wiki/MSD_Capital\">MSD Capital</a>&nbsp;via&nbsp;<a class=\"mw-redirect\" title=\"Zuffa, LLC\" href=\"https://en.wikipedia.org/wiki/Zuffa,_LLC\">Zuffa, LLC</a>.<sup id=\"cite_ref-The_Hollywood_Reporter_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-The_Hollywood_Reporter-3\">[3]</a></sup><sup id=\"cite_ref-Kroll_4-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-Kroll-4\">[4]</a></sup>&nbsp;It is the largest MMA promotion company in the world and features some of the highest-level fighters in the sport on its roster.<sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-5\">[5]</a></sup>&nbsp;The UFC produces events worldwide that showcase twelve&nbsp;<a title=\"Weight class\" href=\"https://en.wikipedia.org/wiki/Weight_class\">weight divisions</a>&nbsp;(eight men's divisions and four women's divisions) and abides by the&nbsp;<a class=\"mw-redirect\" title=\"Unified Rules of Mixed Martial Arts\" href=\"https://en.wikipedia.org/wiki/Unified_Rules_of_Mixed_Martial_Arts\">Unified Rules of Mixed Martial Arts</a>.<sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-6\">[6]</a></sup>&nbsp;As of 2020, the UFC has held&nbsp;<a title=\"List of UFC events\" href=\"https://en.wikipedia.org/wiki/List_of_UFC_events\">over 500 events</a>.&nbsp;<a title=\"Dana White\" href=\"https://en.wikipedia.org/wiki/Dana_White\">Dana White</a>&nbsp;has been UFC president since 2001. Under White's stewardship, the UFC has grown into a globally popular multi-billion-dollar enterprise.<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-7\">[7]</a></sup></p>\r\n<p>The first event was held in 1993 at the&nbsp;<a title=\"McNichols Sports Arena\" href=\"https://en.wikipedia.org/wiki/McNichols_Sports_Arena\">McNichols Sports Arena</a>&nbsp;in&nbsp;<a title=\"Denver\" href=\"https://en.wikipedia.org/wiki/Denver\">Denver</a>,&nbsp;<a title=\"Colorado\" href=\"https://en.wikipedia.org/wiki/Colorado\">Colorado</a>.<sup id=\"cite_ref-Stefano_8-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-Stefano-8\">[8]</a></sup>&nbsp;The purpose of the early Ultimate Fighting Championship competitions was to identify the most effective&nbsp;<a title=\"Martial arts\" href=\"https://en.wikipedia.org/wiki/Martial_arts\">martial art</a>&nbsp;in a contest with minimal rules and no weight classes between competitors of different fighting disciplines like&nbsp;<a title=\"Boxing\" href=\"https://en.wikipedia.org/wiki/Boxing\">Boxing</a>,&nbsp;<a title=\"Kickboxing\" href=\"https://en.wikipedia.org/wiki/Kickboxing\">Kickboxing</a>,&nbsp;<a class=\"mw-redirect\" title=\"Brazilian Jiu-Jitsu\" href=\"https://en.wikipedia.org/wiki/Brazilian_Jiu-Jitsu\">Brazilian Jiu-Jitsu</a>,&nbsp;<a title=\"Sambo (martial art)\" href=\"https://en.wikipedia.org/wiki/Sambo_(martial_art)\">Sambo</a>,&nbsp;<a title=\"Wrestling\" href=\"https://en.wikipedia.org/wiki/Wrestling\">Wrestling</a>,&nbsp;<a title=\"Muay Thai\" href=\"https://en.wikipedia.org/wiki/Muay_Thai\">Muay Thai</a>,&nbsp;<a title=\"Karate\" href=\"https://en.wikipedia.org/wiki/Karate\">Karate</a>,&nbsp;<a title=\"Taekwondo\" href=\"https://en.wikipedia.org/wiki/Taekwondo\">Taekwondo</a>, and&nbsp;<a title=\"Judo\" href=\"https://en.wikipedia.org/wiki/Judo\">Judo</a>. In subsequent events, fighters began adopting effective techniques from more than one discipline, which indirectly helped create a separate style of fighting known as present-day mixed martial arts.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-9\">[9]</a></sup>&nbsp;In 2016, UFC's parent company, Zuffa, was sold to a group led by&nbsp;<a class=\"mw-redirect\" title=\"William Morris Endeavor\" href=\"https://en.wikipedia.org/wiki/William_Morris_Endeavor\">William Morris Endeavor</a>&nbsp;(WME&ndash;IMG), including&nbsp;<a class=\"mw-redirect\" title=\"Silver Lake Partners\" href=\"https://en.wikipedia.org/wiki/Silver_Lake_Partners\">Silver Lake Partners</a>,&nbsp;<a title=\"Kohlberg Kravis Roberts\" href=\"https://en.wikipedia.org/wiki/Kohlberg_Kravis_Roberts\">Kohlberg Kravis Roberts</a>&nbsp;and&nbsp;<a title=\"MSD Capital\" href=\"https://en.wikipedia.org/wiki/MSD_Capital\">MSD Capital</a><sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-10\">[10]</a></sup>&nbsp;for US$4.025 billion.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-11\">[11]</a></sup></p>\r\n<p>With a TV deal and expansion in Australia, Asia, Europe,<sup id=\"cite_ref-12\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-12\">[12]</a></sup><sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-13\">[13]</a></sup><sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-14\">[14]</a></sup>&nbsp;and new markets within the United States, the UFC has increased in popularity, and has achieved greater&nbsp;<a title=\"Mainstream media\" href=\"https://en.wikipedia.org/wiki/Mainstream_media\">mainstream media</a>&nbsp;coverage; the promotion brought in a total revenue of US$609 million in 2015,<sup id=\"cite_ref-:0_15-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-:0-15\">[15]</a></sup>&nbsp;and its next domestic media rights agreement with&nbsp;<a title=\"ESPN\" href=\"https://en.wikipedia.org/wiki/ESPN\">ESPN</a>&nbsp;was valued at $1.5 billion over a five-year term.<sup id=\"cite_ref-16\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-16\">[16]</a></sup></p>"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Exists (4.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 LIMIT $2[0m  [["title", "Ultimate Fighting Championship (UFC)"], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Create (2.6ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "tag", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ultimate Fighting Championship (UFC)"], ["body", "<p>The&nbsp;<strong>Ultimate Fighting Championship</strong>&nbsp;(<strong>UFC</strong>) is an American&nbsp;<a title=\"Mixed martial arts\" href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts\">mixed martial arts</a>&nbsp;(MMA)&nbsp;<a title=\"Promoter (entertainment)\" href=\"https://en.wikipedia.org/wiki/Promoter_(entertainment)\">promotion company</a>&nbsp;based in&nbsp;<a title=\"Las Vegas\" href=\"https://en.wikipedia.org/wiki/Las_Vegas\">Las Vegas</a>,&nbsp;<a title=\"Nevada\" href=\"https://en.wikipedia.org/wiki/Nevada\">Nevada</a>, which is owned and operated by&nbsp;<a class=\"mw-redirect\" title=\"Endeavor Group Holdings\" href=\"https://en.wikipedia.org/wiki/Endeavor_Group_Holdings\">Endeavor Group Holdings</a>&nbsp;along with&nbsp;<a class=\"mw-redirect\" title=\"Silver Lake Partners\" href=\"https://en.wikipedia.org/wiki/Silver_Lake_Partners\">Silver Lake Partners</a>,&nbsp;<a title=\"Kohlberg Kravis Roberts\" href=\"https://en.wikipedia.org/wiki/Kohlberg_Kravis_Roberts\">Kohlberg Kravis Roberts</a>&nbsp;and&nbsp;<a title=\"MSD Capital\" href=\"https://en.wikipedia.org/wiki/MSD_Capital\">MSD Capital</a>&nbsp;via&nbsp;<a class=\"mw-redirect\" title=\"Zuffa, LLC\" href=\"https://en.wikipedia.org/wiki/Zuffa,_LLC\">Zuffa, LLC</a>.<sup id=\"cite_ref-The_Hollywood_Reporter_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-The_Hollywood_Reporter-3\">[3]</a></sup><sup id=\"cite_ref-Kroll_4-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-Kroll-4\">[4]</a></sup>&nbsp;It is the largest MMA promotion company in the world and features some of the highest-level fighters in the sport on its roster.<sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-5\">[5]</a></sup>&nbsp;The UFC produces events worldwide that showcase twelve&nbsp;<a title=\"Weight class\" href=\"https://en.wikipedia.org/wiki/Weight_class\">weight divisions</a>&nbsp;(eight men's divisions and four women's divisions) and abides by the&nbsp;<a class=\"mw-redirect\" title=\"Unified Rules of Mixed Martial Arts\" href=\"https://en.wikipedia.org/wiki/Unified_Rules_of_Mixed_Martial_Arts\">Unified Rules of Mixed Martial Arts</a>.<sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-6\">[6]</a></sup>&nbsp;As of 2020, the UFC has held&nbsp;<a title=\"List of UFC events\" href=\"https://en.wikipedia.org/wiki/List_of_UFC_events\">over 500 events</a>.&nbsp;<a title=\"Dana White\" href=\"https://en.wikipedia.org/wiki/Dana_White\">Dana White</a>&nbsp;has been UFC president since 2001. Under White's stewardship, the UFC has grown into a globally popular multi-billion-dollar enterprise.<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-7\">[7]</a></sup></p>\r\n<p>The first event was held in 1993 at the&nbsp;<a title=\"McNichols Sports Arena\" href=\"https://en.wikipedia.org/wiki/McNichols_Sports_Arena\">McNichols Sports Arena</a>&nbsp;in&nbsp;<a title=\"Denver\" href=\"https://en.wikipedia.org/wiki/Denver\">Denver</a>,&nbsp;<a title=\"Colorado\" href=\"https://en.wikipedia.org/wiki/Colorado\">Colorado</a>.<sup id=\"cite_ref-Stefano_8-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-Stefano-8\">[8]</a></sup>&nbsp;The purpose of the early Ultimate Fighting Championship competitions was to identify the most effective&nbsp;<a title=\"Martial arts\" href=\"https://en.wikipedia.org/wiki/Martial_arts\">martial art</a>&nbsp;in a contest with minimal rules and no weight classes between competitors of different fighting disciplines like&nbsp;<a title=\"Boxing\" href=\"https://en.wikipedia.org/wiki/Boxing\">Boxing</a>,&nbsp;<a title=\"Kickboxing\" href=\"https://en.wikipedia.org/wiki/Kickboxing\">Kickboxing</a>,&nbsp;<a class=\"mw-redirect\" title=\"Brazilian Jiu-Jitsu\" href=\"https://en.wikipedia.org/wiki/Brazilian_Jiu-Jitsu\">Brazilian Jiu-Jitsu</a>,&nbsp;<a title=\"Sambo (martial art)\" href=\"https://en.wikipedia.org/wiki/Sambo_(martial_art)\">Sambo</a>,&nbsp;<a title=\"Wrestling\" href=\"https://en.wikipedia.org/wiki/Wrestling\">Wrestling</a>,&nbsp;<a title=\"Muay Thai\" href=\"https://en.wikipedia.org/wiki/Muay_Thai\">Muay Thai</a>,&nbsp;<a title=\"Karate\" href=\"https://en.wikipedia.org/wiki/Karate\">Karate</a>,&nbsp;<a title=\"Taekwondo\" href=\"https://en.wikipedia.org/wiki/Taekwondo\">Taekwondo</a>, and&nbsp;<a title=\"Judo\" href=\"https://en.wikipedia.org/wiki/Judo\">Judo</a>. In subsequent events, fighters began adopting effective techniques from more than one discipline, which indirectly helped create a separate style of fighting known as present-day mixed martial arts.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-9\">[9]</a></sup>&nbsp;In 2016, UFC's parent company, Zuffa, was sold to a group led by&nbsp;<a class=\"mw-redirect\" title=\"William Morris Endeavor\" href=\"https://en.wikipedia.org/wiki/William_Morris_Endeavor\">William Morris Endeavor</a>&nbsp;(WME&ndash;IMG), including&nbsp;<a class=\"mw-redirect\" title=\"Silver Lake Partners\" href=\"https://en.wikipedia.org/wiki/Silver_Lake_Partners\">Silver Lake Partners</a>,&nbsp;<a title=\"Kohlberg Kravis Roberts\" href=\"https://en.wikipedia.org/wiki/Kohlberg_Kravis_Roberts\">Kohlberg Kravis Roberts</a>&nbsp;and&nbsp;<a title=\"MSD Capital\" href=\"https://en.wikipedia.org/wiki/MSD_Capital\">MSD Capital</a><sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-10\">[10]</a></sup>&nbsp;for US$4.025 billion.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-11\">[11]</a></sup></p>\r\n<p>With a TV deal and expansion in Australia, Asia, Europe,<sup id=\"cite_ref-12\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-12\">[12]</a></sup><sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-13\">[13]</a></sup><sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-14\">[14]</a></sup>&nbsp;and new markets within the United States, the UFC has increased in popularity, and has achieved greater&nbsp;<a title=\"Mainstream media\" href=\"https://en.wikipedia.org/wiki/Mainstream_media\">mainstream media</a>&nbsp;coverage; the promotion brought in a total revenue of US$609 million in 2015,<sup id=\"cite_ref-:0_15-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-:0-15\">[15]</a></sup>&nbsp;and its next domestic media rights agreement with&nbsp;<a title=\"ESPN\" href=\"https://en.wikipedia.org/wiki/ESPN\">ESPN</a>&nbsp;was valued at $1.5 billion over a five-year term.<sup id=\"cite_ref-16\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-16\">[16]</a></sup></p>"], ["tag", "MMA"], ["created_at", "2020-11-19 23:12:56.451835"], ["updated_at", "2020-11-19 23:12:56.451835"]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 AND "stories"."id" != $2 LIMIT $3[0m  [["title", "Ultimate Fighting Championship (UFC)"], ["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Update (1.5ms)[0m  [1m[33mUPDATE "stories" SET "updated_at" = $1, "lyraID" = $2, "published_date" = $3 WHERE "stories"."id" = $4[0m  [["updated_at", "2020-11-19 23:12:56.684351"], ["lyraID", "u8e6qHcnGNFjtwJFZP5Yy72X"], ["published_date", "November 19, 2020"], ["id", 47]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:38
+Redirected to http://localhost:3000/stories/47
+Completed 302 Found in 267ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/stories/47" for ::1 at 2020-11-19 18:12:56 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:13
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:12:59 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (2.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 267ms (Views: 260.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:13:58 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (18.5ms)
+  Rendered stories/new.html.erb within layouts/application (143.7ms)
+Completed 200 OK in 296ms (Views: 293.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stories" for ::1 at 2020-11-19 18:15:01 -0500
+Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"title"=>"Fisker, The Next Tesla", "tag"=>"ev", "body"=>"<p><strong>Fisker Inc.</strong>&nbsp;is an American electric vehicle automaker founded by&nbsp;<a title=\"Henrik Fisker\" href=\"https://en.wikipedia.org/wiki/Henrik_Fisker\">Henrik Fisker</a>. Launched in 2016 and based in Southern California, Fisker Inc. is the relaunch of the Fisker brand previously known as&nbsp;<a title=\"Fisker Automotive\" href=\"https://en.wikipedia.org/wiki/Fisker_Automotive\">Fisker Automotive</a>&nbsp;(founded in 2007 by Henrik Fisker), which produced the&nbsp;<a title=\"Fisker Karma\" href=\"https://en.wikipedia.org/wiki/Fisker_Karma\">Fisker Karma</a>. Fisker Inc. is developing the&nbsp;<a title=\"Fisker EMotion\" href=\"https://en.wikipedia.org/wiki/Fisker_EMotion\">Fisker EMotion</a>, an all-electric sedan that will have a 400-mile electric range;<sup id=\"cite_ref-helliott100316_1-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-helliott100316-1\">[1]</a></sup>&nbsp;and a mass-market electric vehicle SUV called the Fisker Ocean.<sup id=\"cite_ref-2\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-2\">[2]</a></sup></p>\r\n<p>In addition to designing and developing electric vehicles, Fisker Inc. has filed patents pertaining to&nbsp;<a title=\"Solid-state battery\" href=\"https://en.wikipedia.org/wiki/Solid-state_battery\">solid-state battery</a>&nbsp;technology for use in automotive, consumer electronics, and other industries.<sup id=\"cite_ref-dt_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-dt-3\">[3]</a></sup>&nbsp;On July 13, 2020, Fisker Inc. announced an&nbsp;<a title=\"Initial public offering\" href=\"https://en.wikipedia.org/wiki/Initial_public_offering\">initial public offering</a>&nbsp;on the&nbsp;<a title=\"New York Stock Exchange\" href=\"https://en.wikipedia.org/wiki/New_York_Stock_Exchange\">New York Stock Exchange</a>&nbsp;through a merger with Spartan Energy Acquisition Corp (NYSE:SPAQ), which is backed by private private equity firm&nbsp;<a title=\"Apollo Global Management\" href=\"https://en.wikipedia.org/wiki/Apollo_Global_Management\">Apollo Global Management</a>.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-4\">[4]</a></sup>&nbsp;On October 30, 2020, Fisker Inc. completed the reverse merger and is now listed under the ticker NYSE:FSR.<sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-5\">[5]</a></sup></p>"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 LIMIT $2[0m  [["title", "Fisker, The Next Tesla"], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Create (0.9ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "tag", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Fisker, The Next Tesla"], ["body", "<p><strong>Fisker Inc.</strong>&nbsp;is an American electric vehicle automaker founded by&nbsp;<a title=\"Henrik Fisker\" href=\"https://en.wikipedia.org/wiki/Henrik_Fisker\">Henrik Fisker</a>. Launched in 2016 and based in Southern California, Fisker Inc. is the relaunch of the Fisker brand previously known as&nbsp;<a title=\"Fisker Automotive\" href=\"https://en.wikipedia.org/wiki/Fisker_Automotive\">Fisker Automotive</a>&nbsp;(founded in 2007 by Henrik Fisker), which produced the&nbsp;<a title=\"Fisker Karma\" href=\"https://en.wikipedia.org/wiki/Fisker_Karma\">Fisker Karma</a>. Fisker Inc. is developing the&nbsp;<a title=\"Fisker EMotion\" href=\"https://en.wikipedia.org/wiki/Fisker_EMotion\">Fisker EMotion</a>, an all-electric sedan that will have a 400-mile electric range;<sup id=\"cite_ref-helliott100316_1-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-helliott100316-1\">[1]</a></sup>&nbsp;and a mass-market electric vehicle SUV called the Fisker Ocean.<sup id=\"cite_ref-2\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-2\">[2]</a></sup></p>\r\n<p>In addition to designing and developing electric vehicles, Fisker Inc. has filed patents pertaining to&nbsp;<a title=\"Solid-state battery\" href=\"https://en.wikipedia.org/wiki/Solid-state_battery\">solid-state battery</a>&nbsp;technology for use in automotive, consumer electronics, and other industries.<sup id=\"cite_ref-dt_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-dt-3\">[3]</a></sup>&nbsp;On July 13, 2020, Fisker Inc. announced an&nbsp;<a title=\"Initial public offering\" href=\"https://en.wikipedia.org/wiki/Initial_public_offering\">initial public offering</a>&nbsp;on the&nbsp;<a title=\"New York Stock Exchange\" href=\"https://en.wikipedia.org/wiki/New_York_Stock_Exchange\">New York Stock Exchange</a>&nbsp;through a merger with Spartan Energy Acquisition Corp (NYSE:SPAQ), which is backed by private private equity firm&nbsp;<a title=\"Apollo Global Management\" href=\"https://en.wikipedia.org/wiki/Apollo_Global_Management\">Apollo Global Management</a>.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-4\">[4]</a></sup>&nbsp;On October 30, 2020, Fisker Inc. completed the reverse merger and is now listed under the ticker NYSE:FSR.<sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-5\">[5]</a></sup></p>"], ["tag", "ev"], ["created_at", "2020-11-19 23:15:01.100680"], ["updated_at", "2020-11-19 23:15:01.100680"]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 AND "stories"."id" != $2 LIMIT $3[0m  [["title", "Fisker, The Next Tesla"], ["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Update (2.1ms)[0m  [1m[33mUPDATE "stories" SET "tag" = $1, "updated_at" = $2, "lyraID" = $3, "published_date" = $4 WHERE "stories"."id" = $5[0m  [["tag", "EV"], ["updated_at", "2020-11-19 23:15:01.328522"], ["lyraID", "xrPxATCsvKriEvRrz4ckeqxn"], ["published_date", "November 19, 2020"], ["id", 48]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:38
+Redirected to http://localhost:3000/stories/48
+Completed 302 Found in 253ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/stories/48" for ::1 at 2020-11-19 18:15:01 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mStory Load (2.5ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:13
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 143ms (Views: 127.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/stories/" for ::1 at 2020-11-19 18:15:08 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 115ms (Views: 111.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:16:04 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 260ms (Views: 254.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 18:16:10 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-19"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendered newsletters/_story.html.erb (2.4ms)
+  Rendered newsletters/_story.html.erb (0.4ms)
+  Rendered newsletters/_story.html.erb (0.3ms)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 19, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Create (6.4ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 19, 2020"], ["html", "<div class=\"show-container show-container-partial\">\n  <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n    <tr>\n      <td class=\"section section-partial body-copy\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n          <tr>\n            <td class=\"tag-outer\">\n              <table align=\"left\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"\n                style=\"display: inline-block; border-collapse: collapse;\">\n                <tr>\n                  <td class=\"tag-inner\" style=\"color: #ffffff;\">EV</td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n\n        <h1>\n          <font color=\"#000000\">Fisker, The Next Tesla</font>\n        </h1>\n\n        <p><strong>Fisker Inc.</strong>&nbsp;is an American electric vehicle automaker founded by&nbsp;<a title=\"Henrik Fisker\" href=\"https://en.wikipedia.org/wiki/Henrik_Fisker\">Henrik Fisker</a>. Launched in 2016 and based in Southern California, Fisker Inc. is the relaunch of the Fisker brand previously known as&nbsp;<a title=\"Fisker Automotive\" href=\"https://en.wikipedia.org/wiki/Fisker_Automotive\">Fisker Automotive</a>&nbsp;(founded in 2007 by Henrik Fisker), which produced the&nbsp;<a title=\"Fisker Karma\" href=\"https://en.wikipedia.org/wiki/Fisker_Karma\">Fisker Karma</a>. Fisker Inc. is developing the&nbsp;<a title=\"Fisker EMotion\" href=\"https://en.wikipedia.org/wiki/Fisker_EMotion\">Fisker EMotion</a>, an all-electric sedan that will have a 400-mile electric range;<sup id=\"cite_ref-helliott100316_1-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-helliott100316-1\">[1]</a></sup>&nbsp;and a mass-market electric vehicle SUV called the Fisker Ocean.<sup id=\"cite_ref-2\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-2\">[2]</a></sup></p>\r\n<p>In addition to designing and developing electric vehicles, Fisker Inc. has filed patents pertaining to&nbsp;<a title=\"Solid-state battery\" href=\"https://en.wikipedia.org/wiki/Solid-state_battery\">solid-state battery</a>&nbsp;technology for use in automotive, consumer electronics, and other industries.<sup id=\"cite_ref-dt_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-dt-3\">[3]</a></sup>&nbsp;On July 13, 2020, Fisker Inc. announced an&nbsp;<a title=\"Initial public offering\" href=\"https://en.wikipedia.org/wiki/Initial_public_offering\">initial public offering</a>&nbsp;on the&nbsp;<a title=\"New York Stock Exchange\" href=\"https://en.wikipedia.org/wiki/New_York_Stock_Exchange\">New York Stock Exchange</a>&nbsp;through a merger with Spartan Energy Acquisition Corp (NYSE:SPAQ), which is backed by private private equity firm&nbsp;<a title=\"Apollo Global Management\" href=\"https://en.wikipedia.org/wiki/Apollo_Global_Management\">Apollo Global Management</a>.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-4\">[4]</a></sup>&nbsp;On October 30, 2020, Fisker Inc. completed the reverse merger and is now listed under the ticker NYSE:FSR.<sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Fisker_Inc.#cite_note-5\">[5]</a></sup></p>\n      </td>\n    </tr>\n  </table>\n</div>\n\n\n\n\n\n\n\n\n\n<div class=\"show-container show-container-partial\">\n  <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n    <tr>\n      <td class=\"section section-partial body-copy\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n          <tr>\n            <td class=\"tag-outer\">\n              <table align=\"left\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"\n                style=\"display: inline-block; border-collapse: collapse;\">\n                <tr>\n                  <td class=\"tag-inner\" style=\"color: #ffffff;\">MMA</td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n\n        <h1>\n          <font color=\"#000000\">Ultimate Fighting Championship (UFC)</font>\n        </h1>\n\n        <p>The&nbsp;<strong>Ultimate Fighting Championship</strong>&nbsp;(<strong>UFC</strong>) is an American&nbsp;<a title=\"Mixed martial arts\" href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts\">mixed martial arts</a>&nbsp;(MMA)&nbsp;<a title=\"Promoter (entertainment)\" href=\"https://en.wikipedia.org/wiki/Promoter_(entertainment)\">promotion company</a>&nbsp;based in&nbsp;<a title=\"Las Vegas\" href=\"https://en.wikipedia.org/wiki/Las_Vegas\">Las Vegas</a>,&nbsp;<a title=\"Nevada\" href=\"https://en.wikipedia.org/wiki/Nevada\">Nevada</a>, which is owned and operated by&nbsp;<a class=\"mw-redirect\" title=\"Endeavor Group Holdings\" href=\"https://en.wikipedia.org/wiki/Endeavor_Group_Holdings\">Endeavor Group Holdings</a>&nbsp;along with&nbsp;<a class=\"mw-redirect\" title=\"Silver Lake Partners\" href=\"https://en.wikipedia.org/wiki/Silver_Lake_Partners\">Silver Lake Partners</a>,&nbsp;<a title=\"Kohlberg Kravis Roberts\" href=\"https://en.wikipedia.org/wiki/Kohlberg_Kravis_Roberts\">Kohlberg Kravis Roberts</a>&nbsp;and&nbsp;<a title=\"MSD Capital\" href=\"https://en.wikipedia.org/wiki/MSD_Capital\">MSD Capital</a>&nbsp;via&nbsp;<a class=\"mw-redirect\" title=\"Zuffa, LLC\" href=\"https://en.wikipedia.org/wiki/Zuffa,_LLC\">Zuffa, LLC</a>.<sup id=\"cite_ref-The_Hollywood_Reporter_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-The_Hollywood_Reporter-3\">[3]</a></sup><sup id=\"cite_ref-Kroll_4-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-Kroll-4\">[4]</a></sup>&nbsp;It is the largest MMA promotion company in the world and features some of the highest-level fighters in the sport on its roster.<sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-5\">[5]</a></sup>&nbsp;The UFC produces events worldwide that showcase twelve&nbsp;<a title=\"Weight class\" href=\"https://en.wikipedia.org/wiki/Weight_class\">weight divisions</a>&nbsp;(eight men's divisions and four women's divisions) and abides by the&nbsp;<a class=\"mw-redirect\" title=\"Unified Rules of Mixed Martial Arts\" href=\"https://en.wikipedia.org/wiki/Unified_Rules_of_Mixed_Martial_Arts\">Unified Rules of Mixed Martial Arts</a>.<sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-6\">[6]</a></sup>&nbsp;As of 2020, the UFC has held&nbsp;<a title=\"List of UFC events\" href=\"https://en.wikipedia.org/wiki/List_of_UFC_events\">over 500 events</a>.&nbsp;<a title=\"Dana White\" href=\"https://en.wikipedia.org/wiki/Dana_White\">Dana White</a>&nbsp;has been UFC president since 2001. Under White's stewardship, the UFC has grown into a globally popular multi-billion-dollar enterprise.<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-7\">[7]</a></sup></p>\r\n<p>The first event was held in 1993 at the&nbsp;<a title=\"McNichols Sports Arena\" href=\"https://en.wikipedia.org/wiki/McNichols_Sports_Arena\">McNichols Sports Arena</a>&nbsp;in&nbsp;<a title=\"Denver\" href=\"https://en.wikipedia.org/wiki/Denver\">Denver</a>,&nbsp;<a title=\"Colorado\" href=\"https://en.wikipedia.org/wiki/Colorado\">Colorado</a>.<sup id=\"cite_ref-Stefano_8-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-Stefano-8\">[8]</a></sup>&nbsp;The purpose of the early Ultimate Fighting Championship competitions was to identify the most effective&nbsp;<a title=\"Martial arts\" href=\"https://en.wikipedia.org/wiki/Martial_arts\">martial art</a>&nbsp;in a contest with minimal rules and no weight classes between competitors of different fighting disciplines like&nbsp;<a title=\"Boxing\" href=\"https://en.wikipedia.org/wiki/Boxing\">Boxing</a>,&nbsp;<a title=\"Kickboxing\" href=\"https://en.wikipedia.org/wiki/Kickboxing\">Kickboxing</a>,&nbsp;<a class=\"mw-redirect\" title=\"Brazilian Jiu-Jitsu\" href=\"https://en.wikipedia.org/wiki/Brazilian_Jiu-Jitsu\">Brazilian Jiu-Jitsu</a>,&nbsp;<a title=\"Sambo (martial art)\" href=\"https://en.wikipedia.org/wiki/Sambo_(martial_art)\">Sambo</a>,&nbsp;<a title=\"Wrestling\" href=\"https://en.wikipedia.org/wiki/Wrestling\">Wrestling</a>,&nbsp;<a title=\"Muay Thai\" href=\"https://en.wikipedia.org/wiki/Muay_Thai\">Muay Thai</a>,&nbsp;<a title=\"Karate\" href=\"https://en.wikipedia.org/wiki/Karate\">Karate</a>,&nbsp;<a title=\"Taekwondo\" href=\"https://en.wikipedia.org/wiki/Taekwondo\">Taekwondo</a>, and&nbsp;<a title=\"Judo\" href=\"https://en.wikipedia.org/wiki/Judo\">Judo</a>. In subsequent events, fighters began adopting effective techniques from more than one discipline, which indirectly helped create a separate style of fighting known as present-day mixed martial arts.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-9\">[9]</a></sup>&nbsp;In 2016, UFC's parent company, Zuffa, was sold to a group led by&nbsp;<a class=\"mw-redirect\" title=\"William Morris Endeavor\" href=\"https://en.wikipedia.org/wiki/William_Morris_Endeavor\">William Morris Endeavor</a>&nbsp;(WME&ndash;IMG), including&nbsp;<a class=\"mw-redirect\" title=\"Silver Lake Partners\" href=\"https://en.wikipedia.org/wiki/Silver_Lake_Partners\">Silver Lake Partners</a>,&nbsp;<a title=\"Kohlberg Kravis Roberts\" href=\"https://en.wikipedia.org/wiki/Kohlberg_Kravis_Roberts\">Kohlberg Kravis Roberts</a>&nbsp;and&nbsp;<a title=\"MSD Capital\" href=\"https://en.wikipedia.org/wiki/MSD_Capital\">MSD Capital</a><sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-10\">[10]</a></sup>&nbsp;for US$4.025 billion.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-11\">[11]</a></sup></p>\r\n<p>With a TV deal and expansion in Australia, Asia, Europe,<sup id=\"cite_ref-12\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-12\">[12]</a></sup><sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-13\">[13]</a></sup><sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-14\">[14]</a></sup>&nbsp;and new markets within the United States, the UFC has increased in popularity, and has achieved greater&nbsp;<a title=\"Mainstream media\" href=\"https://en.wikipedia.org/wiki/Mainstream_media\">mainstream media</a>&nbsp;coverage; the promotion brought in a total revenue of US$609 million in 2015,<sup id=\"cite_ref-:0_15-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-:0-15\">[15]</a></sup>&nbsp;and its next domestic media rights agreement with&nbsp;<a title=\"ESPN\" href=\"https://en.wikipedia.org/wiki/ESPN\">ESPN</a>&nbsp;was valued at $1.5 billion over a five-year term.<sup id=\"cite_ref-16\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship#cite_note-16\">[16]</a></sup></p>\n      </td>\n    </tr>\n  </table>\n</div>\n\n\n\n\n\n\n\n\n\n<div class=\"show-container show-container-partial\">\n  <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n    <tr>\n      <td class=\"section section-partial body-copy\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n          <tr>\n            <td class=\"tag-outer\">\n              <table align=\"left\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"\n                style=\"display: inline-block; border-collapse: collapse;\">\n                <tr>\n                  <td class=\"tag-inner\" style=\"color: #ffffff;\">GOAT</td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n\n        <h1>\n          <font color=\"#000000\">The Warm Up - J. Cole</font>\n        </h1>\n\n        <p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>\n      </td>\n    </tr>\n  </table>\n</div>\n\n\n\n\n\n\n\n\n\n"], ["created_at", "2020-11-19 23:16:10.124422"], ["updated_at", "2020-11-19 23:16:10.124422"]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:43
+  [1m[36mNewsletter Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 19, 2020"], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:43
+  [1m[36mNewsletter Update (2.2ms)[0m  [1m[33mUPDATE "newsletters" SET "updated_at" = $1, "lyraID" = $2 WHERE "newsletters"."id" = $3[0m  [["updated_at", "2020-11-19 23:16:17.919926"], ["lyraID", "xhmZoQyprVZAs6k4fQHQ7MXY"], ["id", 30]]
+  ↳ app/controllers/newsletters_controller.rb:43
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:43
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 7867ms (ActiveRecord: 24.1ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:16:17 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (3.1ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 155ms (Views: 146.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:16:32 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.2ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 158ms (Views: 112.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/newsletters/30" for ::1 at 2020-11-19 18:16:36 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mNewsletter Load (1.3ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (10.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/_story.html.erb (1.9ms)
+  Rendered newsletters/_story.html.erb (0.2ms)
+  Rendered newsletters/_story.html.erb (0.3ms)
+  Rendered newsletters/show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 239ms (Views: 76.4ms | ActiveRecord: 29.6ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 18:17:54 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-20"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Exists (4.9ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 20, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Create (5.1ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 20, 2020"], ["html", "<h3 id='empty-table'>No stories found for this newsletter :(</h3>"], ["created_at", "2020-11-19 23:17:54.550128"], ["updated_at", "2020-11-19 23:17:54.550128"]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[36mNewsletter Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 20, 2020"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[36mNewsletter Update (0.7ms)[0m  [1m[33mUPDATE "newsletters" SET "updated_at" = $1, "lyraID" = $2 WHERE "newsletters"."id" = $3[0m  [["updated_at", "2020-11-19 23:17:54.772605"], ["lyraID", "LGRswcmVqBvb4aC4Qj5Zume4"], ["id", 31]]
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:42
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 265ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:17:54 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (0.8ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 18:17:58 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-20"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (2.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 20, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.2ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 233ms (Views: 197.7ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 18:18:04 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-21"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (2.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Exists (7.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 21, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Create (6.4ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 21, 2020"], ["html", "<h3 id='empty-table'>No stories found for this newsletter :(</h3>"], ["created_at", "2020-11-19 23:18:04.375241"], ["updated_at", "2020-11-19 23:18:04.375241"]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[36mNewsletter Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 21, 2020"], ["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[36mNewsletter Update (0.6ms)[0m  [1m[33mUPDATE "newsletters" SET "updated_at" = $1, "lyraID" = $2 WHERE "newsletters"."id" = $3[0m  [["updated_at", "2020-11-19 23:18:04.609486"], ["lyraID", "V8EPyCSNY2XGavAQk4BkWJZH"], ["id", 32]]
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:42
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 293ms (ActiveRecord: 32.5ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:18:04 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (11.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (0.9ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 165ms (Views: 150.1ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:18:42 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (8.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 147ms (Views: 133.6ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:20:14 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (8.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (1.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 209ms (Views: 181.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:20:17 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.2ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 230ms (Views: 221.7ms | ActiveRecord: 4.6ms)
+
+

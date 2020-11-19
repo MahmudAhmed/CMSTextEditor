@@ -37,7 +37,6 @@ class NewslettersController < ApplicationController
       request["Authorization"] = "Bearer WBktXBdQAGL717bfLaUMbRr2"
       form_data = [['date', @newsletter.date], ['html', @newsletter.html]]
       request.set_form form_data, 'multipart/form-data'
-      debugger
       response = https.request(request)
       @newsletter.lyraID = JSON.parse(response.body)["data"]["id"]
       @newsletter.save
