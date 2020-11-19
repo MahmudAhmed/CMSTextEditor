@@ -3,7 +3,7 @@
 ## Technologies
 * Ruby on Rails
 * PostgreSQL
-* HTML5/SCSS
+* HTML/CSS
 
 ## Installation 
 
