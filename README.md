@@ -49,8 +49,29 @@ rails s
 ## Preview/Mentions
 
 <p align="center">
-  <img width="600" height="500" src="./app/assets/images/stories_index.png">
+  <img width="100%" height="500" src="./app/assets/images/stories_index.png">
 </p>
+
+<p align="center">
+  <img width="100%" height="500" src="./app/assets/images/new_story.png">
+</p>
+
+<p align="center">
+  <img width="100%" height="500" src="./app/assets/images/story_show.png">
+</p>
+
+<p align="center">
+  <img width="100%" height="500" src="./app/assets/images/newsletter_index.png">
+</p>
+
+<p align="center">
+  <img width="100%" height="500" src="./app/assets/images/newsletter_show.png">
+</p>
+
+<p align="center">
+  <img width="100%" height="500" src="./app/assets/images/lyri.png">
+</p>
+
 
 ## Future Endeavors
 
