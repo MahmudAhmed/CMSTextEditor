@@ -43,33 +43,33 @@ rails s
 
 * Lyra API is synced for any action that might take place in application. For example, if you DELETE a story in your application, it will also be deleted in Lyra.
 
-* Minimalist UI/UX
+* Minimalist UI/UX & Optimized to fit all screen sizes. 
 
 
 ## Preview/Mentions
 
 <p align="center">
-  <img width="100%" height="500" src="./app/assets/images/stories_index.png">
+  <img width="60%" height="100%" src="./app/assets/images/stories_index.png">
 </p>
 
 <p align="center">
-  <img width="100%" height="500" src="./app/assets/images/new_story.png">
+  <img width="60%" height="100%" src="./app/assets/images/new_story.png">
 </p>
 
 <p align="center">
-  <img width="100%" height="500" src="./app/assets/images/story_show.png">
+  <img width="60%" height="100%" src="./app/assets/images/story_show.png">
 </p>
 
 <p align="center">
-  <img width="100%" height="500" src="./app/assets/images/newsletter_index.png">
+  <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
 </p>
 
 <p align="center">
-  <img width="100%" height="500" src="./app/assets/images/newsletter_show.png">
+  <img width="60%" height="100%" src="./app/assets/images/newsletter_show.png">
 </p>
 
 <p align="center">
-  <img width="100%" height="500" src="./app/assets/images/lyri.png">
+  <img width="60%" height="100%" src="./app/assets/images/lyri.png">
 </p>
 
 
