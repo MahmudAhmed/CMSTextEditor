@@ -1,11 +1,11 @@
 require "uri"
 require "net/http"
+require 'open-uri' 
 
 
 class StoriesController < ApplicationController
   def index 
     @stories = Story.all
-
     render :index
   end
   
@@ -21,15 +21,16 @@ class StoriesController < ApplicationController
 
   def create 
     @story = Story.new(stories_param)
-    @story.tag.upcase! 
     if @story.save
+      @story.tag.upcase! 
+      @story.published_date = Time.now.strftime("%B %d, %Y")
       url = URI("https://lyra-api.herokuapp.com/api/stories")
       https = Net::HTTP.new(url.host, url.port);
       https.use_ssl = true
 
       request = Net::HTTP::Post.new(url)
       request["Authorization"] = "Bearer WBktXBdQAGL717bfLaUMbRr2"
-      form_data = [['html', @story.body],['title', @story.title], ['tag', @story.tag]]
+      form_data = [['html', @story.body],['title', @story.title], ['tag', @story.tag], ['published_date', @story.published_date]]
       request.set_form form_data, 'multipart/form-data'
       
       response = https.request(request)

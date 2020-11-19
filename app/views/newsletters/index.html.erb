@@ -1,19 +1,45 @@
 <div class="index-container">
 
   <div class="section-title-container">
-    <h4 class="section-title">Recent Stories</h4>
-  </div>
+    <h4 class="section-title">Recent Newsletters</h4>
+    <div>
+      <a target="_self" href="<%= stories_url %>" id="submit-btn">Stories</a>
+    </div>
+  </div> 
+
+  <% if !@newsletter.errors.empty?%>
+    <ul class="from-errors">
+      <% @newsletter.errors.full_messages.each do |msg| %>
+        <li id="errors"><%= msg %></li>
+      <%end%>
+    </ul>
+  <% end %>
+
 
   <table id="index-table">
     <tr>
       <th>Newsletter</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <% if !@newsletters.empty? %>
+        <th>Update</th>
+        <th>Delete</th>
+      <% end %>
     </tr>
-    <% @newsletters.each do |newsletter| %>
+    <% if @newsletters.empty? %>
+      <tr>
+        <td id="empty-table">
+        Create a newsletter and it will show up here...
+        </td>
+      </tr>
+    <% else %>
+      <% @newsletters.each do |newsletter| %>
         <tr>
           <td><a href="<%=newsletter_url(newsletter.id)%>"><%= newsletter.date %></a></td>
-          <td><a target="_self" href="<%= edit_newsletter_url(newsletter.id) %>">Edit </a></td>
+          <td>
+            <form action="<%= newsletter_url(newsletter.id) %>" method="POST" id="the-form"> 
+              <input type="hidden" name="_method" value="PATCH" />
+              <button id="delete-btn">Update</button>
+            </form>          
+          </td>
           <td>
             <form action="<%= newsletter_url(newsletter.id) %>" method="POST" id="the-form">  
                 <input type="hidden" name="_method" value="DELETE" />
@@ -21,11 +47,13 @@
             </form>
           </td>
         </tr>
+      <% end %>
     <% end %>
   </table>
 
   <div>
     <form action="<%= newsletters_url %>" method="POST" id="the-form">  
+      <input type="date" name="newsletter[date]" value="<%=Time.now.strftime("%Y-%m-%d")%>"  min="<%=Time.now.strftime("%Y-%m-%d")%>" />
       <button id="submit-btn">Create New</button>
     </form>
   </div>

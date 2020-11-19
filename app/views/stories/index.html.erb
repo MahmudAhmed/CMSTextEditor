@@ -2,30 +2,45 @@
 
   <div class="section-title-container">
     <h4 class="section-title">Recent Stories</h4>
+    <div>
+      <a target="_self" href="<%= newsletters_url %>" id="submit-btn">Newsletters</a>
+    </div>
   </div>
 
   <table id="index-table">
     <tr>
-      <th>Title</th>
+      <th>Story</th>
+    <% if !@stories.empty? %>
+
       <th>Edit</th>
       <th>Delete</th>
+
+      <% end %>
     </tr>
-    <% @stories.each do |story| %>
-        <tr>
-          <td><a href="<%=story_url(story.id)%>"><%= story.title %></a></td>
-          <td><a target="_self" href="<%= edit_story_url(story.id) %>">Edit </a></td>
-          <td>
-            <form action="<%= story_url(story.id) %>" method="POST" id="the-form">  
-                <input type="hidden" name="_method" value="DELETE" />
-                <button id="delete-btn">Delete</button>
-            </form>
-          </td>
-        </tr>
+    <% if @stories.empty? %>
+      <tr>
+        <td id="empty-table">
+        Write a story and it will show up here...
+        </td>
+      </tr>
+    <% else %>
+      <% @stories.reverse_each do |story| %>
+          <tr>
+            <td><a href="<%=story_url(story.id)%>"><%= story.title %></a></td>
+            <td><a target="_self" href="<%= edit_story_url(story.id) %>">Edit </a></td>
+            <td>
+              <form action="<%= story_url(story.id) %>" method="POST" id="the-form">  
+                  <input type="hidden" name="_method" value="DELETE" />
+                  <button id="delete-btn">Delete</button>
+              </form>
+            </td>
+          </tr>
+      <% end %>
     <% end %>
   </table>
 
   <div>
-    <a target="_self" href="<%= new_story_url %>" id="submit-btn">Create New</a>
+    <a target="_self" href="<%= new_story_url %>" id="submit-btn">Start Writing</a>
   </div>
 </div>
 
