@@ -18063,3 +18063,321 @@ Processing by NewslettersController#index as HTML
 Completed 200 OK in 213ms (Views: 206.4ms | ActiveRecord: 3.0ms)
 
 
+Started POST "/newsletters" for ::1 at 2020-11-19 18:39:15 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-19"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 19, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Create (8.3ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 19, 2020"], ["html", "<h3 id='empty-table'>No stories found for this newsletter :(</h3>"], ["created_at", "2020-11-19 23:39:15.767883"], ["updated_at", "2020-11-19 23:39:15.767883"]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[36mNewsletter Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 19, 2020"], ["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[36mNewsletter Update (6.8ms)[0m  [1m[33mUPDATE "newsletters" SET "updated_at" = $1, "lyraID" = $2 WHERE "newsletters"."id" = $3[0m  [["updated_at", "2020-11-19 23:39:16.011382"], ["lyraID", "13rPiJ1WPFR6k8gZz2Y7sCxQ"], ["id", 33]]
+  ↳ app/controllers/newsletters_controller.rb:42
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:42
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 288ms (ActiveRecord: 31.6ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:39:16 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.5ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 158ms (Views: 151.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:39:19 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 216ms (Views: 211.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:39:21 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (5.5ms)
+  Rendered stories/new.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 121ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:40:23 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (4.7ms)
+  Rendered stories/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 175ms (Views: 170.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:41:03 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (8.6ms)
+  Rendered stories/new.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 219ms (Views: 213.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:42:21 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (6.2ms)
+  Rendered stories/new.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 209ms (Views: 205.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:42:41 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:42:48 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (9.1ms)
+  Rendered stories/new.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 213ms (Views: 210.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:42:51 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 117ms (Views: 111.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:42:53 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (7.7ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (5.0ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 220ms (Views: 204.2ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:42:58 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 211ms (Views: 206.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:42:59 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (1.6ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 264ms (Views: 256.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/newsletters/33" for ::1 at 2020-11-19 18:43:02 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mNewsletter Load (1.3ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (1.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 186ms (Views: 153.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/newsletters/33" for ::1 at 2020-11-19 18:44:39 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mNewsletter Load (4.3ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (6.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 238ms (Views: 220.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/newsletters/33" for ::1 at 2020-11-19 18:44:49 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mNewsletter Load (2.0ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 220ms (Views: 205.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:45:02 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (5.7ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 189ms (Views: 176.9ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/newsletters/33" for ::1 at 2020-11-19 18:45:19 -0500
+Processing by NewslettersController#destroy as HTML
+  Parameters: {"id"=>"33"}
+Can't verify CSRF token authenticity.
+  [1m[36mNewsletter Load (5.4ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:75
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:83
+  [1m[36mNewsletter Destroy (3.5ms)[0m  [1m[31mDELETE FROM "newsletters" WHERE "newsletters"."id" = $1[0m  [["id", 33]]
+  ↳ app/controllers/newsletters_controller.rb:83
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:83
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 452ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 18:45:20 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 96ms (Views: 87.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:45:21 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 144ms (Views: 135.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 18:45:24 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (4.6ms)
+  Rendered stories/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stories" for ::1 at 2020-11-19 18:45:48 -0500
+Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"title"=>"Jermaine Lamarr Cole", "tag"=>"Music", "body"=>"<p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 LIMIT $2[0m  [["title", "Jermaine Lamarr Cole"], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[36mStory Create (1.7ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "tag", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Jermaine Lamarr Cole"], ["body", "<p><strong>Jermaine Lamarr Cole</strong>&nbsp;(born January 28, 1985), known professionally as&nbsp;<strong>J. Cole</strong>, is a&nbsp;<a title=\"Germany\" href=\"https://en.wikipedia.org/wiki/Germany\">German</a>-born&nbsp;<a title=\"United States\" href=\"https://en.wikipedia.org/wiki/United_States\">American</a>&nbsp;rapper, singer, songwriter, record producer, and record executive. He has been hailed as one of the most respected and influential rappers of his generation.<sup id=\"cite_ref-4\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-4\">[4]</a></sup><sup id=\"cite_ref-5\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-5\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-6\">[6]</a></sup>&nbsp;Born on a military base in Germany and raised in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>,<sup id=\"cite_ref-7\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-7\">[7]</a></sup>&nbsp;Cole initially gained recognition as a rapper following the release of his debut mixtape,&nbsp;<em><a title=\"The Come Up\" href=\"https://en.wikipedia.org/wiki/The_Come_Up\">The Come Up</a></em>, in early 2007. Intent on further pursuing a musical career as a rapper, he went on to release two additional mixtapes,&nbsp;<em><a title=\"The Warm Up\" href=\"https://en.wikipedia.org/wiki/The_Warm_Up\">The Warm Up</a></em>&nbsp;(2009) and&nbsp;<em><a title=\"Friday Night Lights (mixtape)\" href=\"https://en.wikipedia.org/wiki/Friday_Night_Lights_(mixtape)\">Friday Night Lights</a></em>&nbsp;(2010) both to critical acclaim, after signing to&nbsp;<a title=\"Jay-Z\" href=\"https://en.wikipedia.org/wiki/Jay-Z\">Jay-Z</a>'s&nbsp;<a title=\"Roc Nation\" href=\"https://en.wikipedia.org/wiki/Roc_Nation\">Roc Nation</a>&nbsp;imprint in 2009.</p>\r\n<p>Cole released his debut studio album,&nbsp;<em><a title=\"Cole World: The Sideline Story\" href=\"https://en.wikipedia.org/wiki/Cole_World:_The_Sideline_Story\">Cole World: The Sideline Story</a></em>, in 2011. It debuted at number one on the US&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>.<sup id=\"cite_ref-8\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-8\">[8]</a></sup>&nbsp;His next album,&nbsp;<em><a title=\"Born Sinner\" href=\"https://en.wikipedia.org/wiki/Born_Sinner\">Born Sinner</a></em>&nbsp;(2013), also topped the&nbsp;<em>Billboard</em>&nbsp;200. Moving into more&nbsp;<a class=\"mw-redirect\" title=\"Conscious rap\" href=\"https://en.wikipedia.org/wiki/Conscious_rap\">conscious</a>&nbsp;themes,&nbsp;<em><a title=\"2014 Forest Hills Drive\" href=\"https://en.wikipedia.org/wiki/2014_Forest_Hills_Drive\">2014 Forest Hills Drive</a></em>&nbsp;(2014) topped the&nbsp;<em>Billboard</em>&nbsp;200 and earned Cole a&nbsp;<a title=\"Grammy Award for Best Rap Album\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Album\">Best Rap Album</a>&nbsp;nomination at the&nbsp;<a class=\"mw-redirect\" title=\"2015 Grammy Awards\" href=\"https://en.wikipedia.org/wiki/2015_Grammy_Awards\">2015 Grammy Awards</a>.<sup id=\"cite_ref-9\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-9\">[9]</a></sup>&nbsp;His&nbsp;<a title=\"Jazz\" href=\"https://en.wikipedia.org/wiki/Jazz\">jazz</a>&nbsp;influenced fourth album,&nbsp;<em><a title=\"4 Your Eyez Only\" href=\"https://en.wikipedia.org/wiki/4_Your_Eyez_Only\">4 Your Eyez Only</a></em>&nbsp;(2016), debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200.<sup id=\"cite_ref-10\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-10\">[10]</a></sup>&nbsp;Cole's fifth album,&nbsp;<em><a title=\"KOD (album)\" href=\"https://en.wikipedia.org/wiki/KOD_(album)\">KOD</a></em>&nbsp;(2018), became his fifth number-one album on the&nbsp;<em>Billboard</em>&nbsp;200 and featured a then-record six simultaneous top 20 hits on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>, tying&nbsp;<a title=\"The Beatles\" href=\"https://en.wikipedia.org/wiki/The_Beatles\">The Beatles</a>.<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-11\">[11]</a></sup></p>\r\n<p>Self-taught on piano, Cole also acts as a&nbsp;<a title=\"Hip hop production\" href=\"https://en.wikipedia.org/wiki/Hip_hop_production\">producer</a>&nbsp;alongside his rap career, producing&nbsp;<a title=\"Single (music)\" href=\"https://en.wikipedia.org/wiki/Single_(music)\">singles</a>&nbsp;for artists such as&nbsp;<a title=\"Kendrick Lamar\" href=\"https://en.wikipedia.org/wiki/Kendrick_Lamar\">Kendrick Lamar</a>&nbsp;and&nbsp;<a title=\"Janet Jackson\" href=\"https://en.wikipedia.org/wiki/Janet_Jackson\">Janet Jackson</a>, as well as handling the majority of the production in his own projects.<sup id=\"cite_ref-US-singles_12-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-US-singles-12\">[12]</a></sup>&nbsp;He has also developed other ventures, including&nbsp;<a title=\"Dreamville Records\" href=\"https://en.wikipedia.org/wiki/Dreamville_Records\">Dreamville Records</a>, as well as a non-profit organization called the Dreamville Foundation.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-13\">[13]</a></sup>&nbsp;Dreamville's compilation album&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>&nbsp;(2019) debuted at number one on the&nbsp;<em>Billboard</em>&nbsp;200 and was nominated for Best Rap Album at the&nbsp;<a title=\"62nd Annual Grammy Awards\" href=\"https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards\">2020 Grammy Awards</a>. In January 2015, Cole decided to house single mothers rent-free at his childhood home in&nbsp;<a title=\"Fayetteville, North Carolina\" href=\"https://en.wikipedia.org/wiki/Fayetteville,_North_Carolina\">Fayetteville, North Carolina</a>.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/J._Cole#cite_note-14\">[14]</a></sup></p>\r\n<p>Cole has won 8&nbsp;<a title=\"BET Hip Hop Awards\" href=\"https://en.wikipedia.org/wiki/BET_Hip_Hop_Awards\">BET Hip Hop Awards</a>, a&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Award</a>&nbsp;for&nbsp;<a title=\"Billboard Music Award for Top Rap Album\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award_for_Top_Rap_Album\">Top Rap Album</a>, a&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Award</a>&nbsp;for&nbsp;<a title=\"Grammy Award for Best Rap Song\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Rap_Song\">Best Rap Song</a>, and three&nbsp;<a title=\"Soul Train Music Awards\" href=\"https://en.wikipedia.org/wiki/Soul_Train_Music_Awards\">Soul Train Music Awards</a>. All five of his albums have been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification#List_of_certifications\">platinum</a>&nbsp;by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA), as well as&nbsp;<em><a title=\"Revenge of the Dreamers III\" href=\"https://en.wikipedia.org/wiki/Revenge_of_the_Dreamers_III\">Revenge of the Dreamers III</a></em>.</p>"], ["tag", "Music"], ["created_at", "2020-11-19 23:45:48.499497"], ["updated_at", "2020-11-19 23:45:48.499497"]]
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" WHERE "stories"."title" = $1 AND "stories"."id" != $2 LIMIT $3[0m  [["title", "Jermaine Lamarr Cole"], ["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[36mStory Update (1.6ms)[0m  [1m[33mUPDATE "stories" SET "tag" = $1, "updated_at" = $2, "lyraID" = $3, "published_date" = $4 WHERE "stories"."id" = $5[0m  [["tag", "MUSIC"], ["updated_at", "2020-11-19 23:45:49.029063"], ["lyraID", "zNb9gs6h6MbnnwjyuWaiAy3b"], ["published_date", "November 19, 2020"], ["id", 50]]
+  ↳ app/controllers/stories_controller.rb:38
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:38
+Redirected to http://localhost:3000/stories/50
+Completed 302 Found in 554ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/stories/50" for ::1 at 2020-11-19 18:45:49 -0500
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mStory Load (2.0ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:13
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 109ms (Views: 92.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:45:56 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (2.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 234ms (Views: 227.8ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/stories/50" for ::1 at 2020-11-19 18:45:58 -0500
+Processing by StoriesController#destroy as HTML
+  Parameters: {"id"=>"50"}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.4ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:69
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:80
+  [1m[36mStory Destroy (1.6ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = $1[0m  [["id", 50]]
+  ↳ app/controllers/stories_controller.rb:80
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:80
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 216ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 18:45:58 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 180ms (Views: 173.0ms | ActiveRecord: 2.7ms)
+
+

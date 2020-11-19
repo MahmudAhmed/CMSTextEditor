@@ -9,8 +9,8 @@
   padding: 0px 15px 15px;
   margin: 10px auto;
       /* margin-bottom: 1rem; */
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
-    background-color: aliceblue;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+  background-color: aliceblue;
 }
 
 .newsletter_stories {
@@ -98,6 +98,7 @@
   /* background-color: yellow; */
   width: 100%;
   margin: auto;
+
 }
 
 .show-container-partial {
@@ -110,6 +111,9 @@
   text-align: center !important;
 }
 
+#newsletter-container {
+  padding: 20px 10px;
+}
 
 
 @media (min-width: 576px) {

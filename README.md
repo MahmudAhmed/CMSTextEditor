@@ -56,6 +56,8 @@ rails s
   <img width="60%" height="100%" src="./app/assets/images/new_story.png">
 </p>
 
+* Validations for form submitions
+
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/story_show.png">
 </p>
