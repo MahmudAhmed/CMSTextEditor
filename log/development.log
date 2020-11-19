@@ -16524,3 +16524,473 @@ Processing by NewslettersController#show as HTML
 Completed 200 OK in 183ms (Views: 169.8ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/newsletters" for ::1 at 2020-11-19 17:18:42 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vault/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (0.8ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 945ms (Views: 916.8ms | ActiveRecord: 6.6ms)
+
+
+Started PATCH "/newsletters/26" for ::1 at 2020-11-19 17:21:44 -0500
+Processing by NewslettersController#update as HTML
+  Parameters: {"id"=>"26"}
+Can't verify CSRF token authenticity.
+  [1m[36mNewsletter Load (0.8ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:47
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendered newsletters/_story.html.erb (1.3ms)
+  Rendered newsletters/_story.html.erb (0.2ms)
+  Rendered newsletters/_story.html.erb (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:55
+  [1m[36mNewsletter Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 19, 2020"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:55
+  [1m[36mNewsletter Update (3.6ms)[0m  [1m[33mUPDATE "newsletters" SET "html" = $1, "updated_at" = $2 WHERE "newsletters"."id" = $3[0m  [["html", "<div class=\"show-container show-container-partial\">\n  <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n    <tr>\n      <td class=\"section section-partial body-copy\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n          <tr>\n            <td class=\"tag-outer\">\n              <table align=\"left\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"\n                style=\"display: inline-block; border-collapse: collapse;\">\n                <tr>\n                  <td class=\"tag-inner\" style=\"color: #ffffff;\">MUSIC</td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n\n        <h1>\n          <font color=\"#000000\">Eminem</font>\n        </h1>\n\n        <p><strong>Marshall Bruce Mathers III</strong>&nbsp;(born October 17, 1972), known professionally as&nbsp;<strong>Eminem</strong>&nbsp;(<span class=\"rt-commentedText nowrap\"><span class=\"IPA nopopups noexcerpt\"><a title=\"Help:IPA/English\" href=\"https://en.wikipedia.org/wiki/Help:IPA/English\">/<span title=\"/ˌ/: secondary stress follows\">ˌ</span><span title=\"/ɛ/: 'e' in 'dress'\">ɛ</span><span title=\"'m' in 'my'\">m</span><span title=\"/ɪ/: 'i' in 'kit'\">ɪ</span><span title=\"/ˈ/: primary stress follows\">ˈ</span><span title=\"'n' in 'nigh'\">n</span><span title=\"/ɛ/: 'e' in 'dress'\">ɛ</span><span title=\"'m' in 'my'\">m</span>/</a></span></span>; often stylized as&nbsp;<strong>EMINƎM</strong>), is an American rapper, songwriter, and record producer. Credited with popularizing&nbsp;<a title=\"Hip hop music\" href=\"https://en.wikipedia.org/wiki/Hip_hop_music\">hip hop</a>&nbsp;in&nbsp;<a title=\"Middle America (United States)\" href=\"https://en.wikipedia.org/wiki/Middle_America_(United_States)\">Middle America</a>, Eminem's global success and acclaimed works are widely regarded as having broken racial barriers for the acceptance of white rappers in&nbsp;<a title=\"Popular music\" href=\"https://en.wikipedia.org/wiki/Popular_music\">popular music</a>. While much of his&nbsp;<a title=\"Transgressive art\" href=\"https://en.wikipedia.org/wiki/Transgressive_art\">transgressive</a>&nbsp;work during the early 2000s made him hugely controversial, he came to be a representation of popular angst and the American&nbsp;<a title=\"Underclass\" href=\"https://en.wikipedia.org/wiki/Underclass\">underclass</a>. He has been&nbsp;<a title=\"List of artists influenced by Eminem\" href=\"https://en.wikipedia.org/wiki/List_of_artists_influenced_by_Eminem\">influential for many artists of various genres</a>.</p>\r\n<p>After his debut album&nbsp;<em><a title=\"Infinite (Eminem album)\" href=\"https://en.wikipedia.org/wiki/Infinite_(Eminem_album)\">Infinite</a></em>&nbsp;(1996) and the&nbsp;<a title=\"Extended play\" href=\"https://en.wikipedia.org/wiki/Extended_play\">extended play</a>&nbsp;<em><a title=\"Slim Shady EP\" href=\"https://en.wikipedia.org/wiki/Slim_Shady_EP\">Slim Shady EP</a></em>&nbsp;(1997), Eminem signed with&nbsp;<a title=\"Dr. Dre\" href=\"https://en.wikipedia.org/wiki/Dr._Dre\">Dr. Dre</a>'s&nbsp;<a title=\"Aftermath Entertainment\" href=\"https://en.wikipedia.org/wiki/Aftermath_Entertainment\">Aftermath Entertainment</a>&nbsp;and subsequently achieved mainstream popularity in 1999 with&nbsp;<em><a title=\"The Slim Shady LP\" href=\"https://en.wikipedia.org/wiki/The_Slim_Shady_LP\">The Slim Shady LP</a></em>. His next two releases&nbsp;<em><a title=\"The Marshall Mathers LP\" href=\"https://en.wikipedia.org/wiki/The_Marshall_Mathers_LP\">The Marshall Mathers LP</a></em>&nbsp;(2000) and&nbsp;<em><a title=\"The Eminem Show\" href=\"https://en.wikipedia.org/wiki/The_Eminem_Show\">The Eminem Show</a></em>&nbsp;(2002) were worldwide successes and were both nominated for the&nbsp;<a title=\"Grammy Award for Album of the Year\" href=\"https://en.wikipedia.org/wiki/Grammy_Award_for_Album_of_the_Year\">Grammy Award for Album of the Year</a>. After the release of his next album,&nbsp;<em><a title=\"Encore (Eminem album)\" href=\"https://en.wikipedia.org/wiki/Encore_(Eminem_album)\">Encore</a></em>&nbsp;(2004), Eminem went on hiatus in 2005 partly due to a&nbsp;<a title=\"Prescription drug\" href=\"https://en.wikipedia.org/wiki/Prescription_drug\">prescription drug</a>&nbsp;<a title=\"Addiction\" href=\"https://en.wikipedia.org/wiki/Addiction\">addiction</a>.<sup id=\"cite_ref-nNNSM_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Eminem#cite_note-nNNSM-3\">[3]</a></sup>&nbsp;He returned to the music industry four years later with the release of&nbsp;<em><a title=\"Relapse (Eminem album)\" href=\"https://en.wikipedia.org/wiki/Relapse_(Eminem_album)\">Relapse</a></em>&nbsp;(2009), and&nbsp;<em><a title=\"Recovery (Eminem album)\" href=\"https://en.wikipedia.org/wiki/Recovery_(Eminem_album)\">Recovery</a></em>&nbsp;was released the following year.&nbsp;<em>Recovery</em>&nbsp;was the best-selling album worldwide of 2010, making it Eminem's second album, after&nbsp;<em>The Eminem Show</em>&nbsp;in 2002, to be the&nbsp;<a title=\"List of best-selling albums\" href=\"https://en.wikipedia.org/wiki/List_of_best-selling_albums#Best-selling_album_by_year_worldwide\">best-selling album of the year worldwide</a>. In the following years, he released the US number one albums&nbsp;<em><a title=\"The Marshall Mathers LP 2\" href=\"https://en.wikipedia.org/wiki/The_Marshall_Mathers_LP_2\">The Marshall Mathers LP 2</a></em>,&nbsp;<em><a title=\"Revival (Eminem album)\" href=\"https://en.wikipedia.org/wiki/Revival_(Eminem_album)\">Revival</a></em>,&nbsp;<em><a title=\"Kamikaze (Eminem album)\" href=\"https://en.wikipedia.org/wiki/Kamikaze_(Eminem_album)\">Kamikaze</a></em>&nbsp;and&nbsp;<em><a title=\"Music to Be Murdered By\" href=\"https://en.wikipedia.org/wiki/Music_to_Be_Murdered_By\">Music to Be Murdered By</a></em>.</p>\r\n<p>Eminem made his debut in the film industry with the&nbsp;<a class=\"mw-redirect\" title=\"Musical drama film\" href=\"https://en.wikipedia.org/wiki/Musical_drama_film\">musical drama film</a>&nbsp;<em><a title=\"8 Mile (film)\" href=\"https://en.wikipedia.org/wiki/8_Mile_(film)\">8 Mile</a></em>&nbsp;(2002), playing a fictionalized version of himself, and his track \"<a title=\"Lose Yourself\" href=\"https://en.wikipedia.org/wiki/Lose_Yourself\">Lose Yourself</a>\" from its soundtrack won the&nbsp;<a title=\"Academy Award for Best Original Song\" href=\"https://en.wikipedia.org/wiki/Academy_Award_for_Best_Original_Song\">Academy Award for Best Original Song</a>, making him the first hip hop artist to ever win the award.<sup id=\"cite_ref-British_Hit_Singles_&amp;_Albums_4-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Eminem#cite_note-British_Hit_Singles_&amp;_Albums-4\">[4]</a></sup>&nbsp;He has made&nbsp;<a title=\"Cameo appearance\" href=\"https://en.wikipedia.org/wiki/Cameo_appearance\">cameo appearances</a>&nbsp;in the films&nbsp;<em><a title=\"The Wash (2001 film)\" href=\"https://en.wikipedia.org/wiki/The_Wash_(2001_film)\">The Wash</a></em>&nbsp;(2001),&nbsp;<em><a title=\"Funny People\" href=\"https://en.wikipedia.org/wiki/Funny_People\">Funny People</a></em>&nbsp;(2009), and&nbsp;<em><a title=\"The Interview\" href=\"https://en.wikipedia.org/wiki/The_Interview\">The Interview</a></em>&nbsp;(2014), and the television series&nbsp;<em><a class=\"mw-redirect\" title=\"Entourage (U.S. TV series)\" href=\"https://en.wikipedia.org/wiki/Entourage_(U.S._TV_series)\">Entourage</a></em>&nbsp;(2010). Eminem has developed other ventures, including&nbsp;<a title=\"Shady Records\" href=\"https://en.wikipedia.org/wiki/Shady_Records\">Shady Records</a>, with manager&nbsp;<a title=\"Paul Rosenberg (music manager)\" href=\"https://en.wikipedia.org/wiki/Paul_Rosenberg_(music_manager)\">Paul Rosenberg</a>, which helped launch the careers of artists such as&nbsp;<a title=\"50 Cent\" href=\"https://en.wikipedia.org/wiki/50_Cent\">50 Cent</a>,&nbsp;<a title=\"Yelawolf\" href=\"https://en.wikipedia.org/wiki/Yelawolf\">Yelawolf</a>&nbsp;and&nbsp;<a title=\"Obie Trice\" href=\"https://en.wikipedia.org/wiki/Obie_Trice\">Obie Trice</a>, among others. He has also established his own channel,&nbsp;<a title=\"Shade 45\" href=\"https://en.wikipedia.org/wiki/Shade_45\">Shade 45</a>, on&nbsp;<a class=\"mw-redirect\" title=\"Sirius XM Holdings\" href=\"https://en.wikipedia.org/wiki/Sirius_XM_Holdings\">Sirius XM Radio</a>. In addition to his solo career, Eminem was a member of the hip hop group&nbsp;<a title=\"D12\" href=\"https://en.wikipedia.org/wiki/D12\">D12</a>. He is also known for collaborations with fellow Detroit-based rapper&nbsp;<a title=\"Royce da 5'9&quot;\" href=\"https://en.wikipedia.org/wiki/Royce_da_5%279%22\">Royce da 5'9\"</a>; the two are collectively known as&nbsp;<a title=\"Bad Meets Evil\" href=\"https://en.wikipedia.org/wiki/Bad_Meets_Evil\">Bad Meets Evil</a>.</p>\r\n<p>Eminem is among the&nbsp;<a title=\"List of best-selling music artists\" href=\"https://en.wikipedia.org/wiki/List_of_best-selling_music_artists\">best-selling music artists of all time</a>, with estimated worldwide sales of more than 220 million records. He was the&nbsp;<a title=\"List of highest-certified music artists in the United States\" href=\"https://en.wikipedia.org/wiki/List_of_highest-certified_music_artists_in_the_United_States\">best-selling music artist in the United States</a>&nbsp;of the 2000s and the best-selling male music artist in the United States of the 2010s, third overall.&nbsp;<em><a title=\"Billboard (magazine)\" href=\"https://en.wikipedia.org/wiki/Billboard_(magazine)\">Billboard</a></em>&nbsp;named him the \"Artist of the Decade (2000&ndash;2009)\".&nbsp;<em>The Marshall Mathers LP</em>,&nbsp;<em>The Eminem Show</em>, \"Lose Yourself\", \"<a title=\"Love the Way You Lie\" href=\"https://en.wikipedia.org/wiki/Love_the_Way_You_Lie\">Love the Way You Lie</a>\" and \"<a title=\"Not Afraid\" href=\"https://en.wikipedia.org/wiki/Not_Afraid\">Not Afraid</a>\" have all been certified&nbsp;<a title=\"RIAA certification\" href=\"https://en.wikipedia.org/wiki/RIAA_certification\">Diamond</a>&nbsp;or higher by the&nbsp;<a title=\"Recording Industry Association of America\" href=\"https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America\">Recording Industry Association of America</a>&nbsp;(RIAA).<sup id=\"cite_ref-:7_5-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Eminem#cite_note-:7-5\">[5]</a></sup>&nbsp;<em><a title=\"Rolling Stone\" href=\"https://en.wikipedia.org/wiki/Rolling_Stone\">Rolling Stone</a></em>&nbsp;included him in its lists of the&nbsp;<a title=\"Rolling Stone's 100 Greatest Artists of All Time\" href=\"https://en.wikipedia.org/wiki/Rolling_Stone%27s_100_Greatest_Artists_of_All_Time\">100 Greatest Artists of All Time</a>&nbsp;and the&nbsp;<a title=\"Rolling Stone's 100 Greatest Songwriters of All Time\" href=\"https://en.wikipedia.org/wiki/Rolling_Stone%27s_100_Greatest_Songwriters_of_All_Time\">100 Greatest Songwriters of All Time</a>. He has won numerous awards, including 15&nbsp;<a title=\"Grammy Award\" href=\"https://en.wikipedia.org/wiki/Grammy_Award\">Grammy Awards</a>, eight&nbsp;<a title=\"American Music Awards\" href=\"https://en.wikipedia.org/wiki/American_Music_Awards\">American Music Awards</a>, 17&nbsp;<a class=\"mw-redirect\" title=\"Billboard Music Award\" href=\"https://en.wikipedia.org/wiki/Billboard_Music_Award\"><em>Billboard</em>&nbsp;Music Awards</a>, an&nbsp;<a title=\"Academy Awards\" href=\"https://en.wikipedia.org/wiki/Academy_Awards\">Academy Award</a>&nbsp;and an&nbsp;<a title=\"MTV Europe Music Award for Global Icon\" href=\"https://en.wikipedia.org/wiki/MTV_Europe_Music_Award_for_Global_Icon\">MTV Europe Music Global Icon Award</a>. He has had ten number one albums on the&nbsp;<a title=\"Billboard 200\" href=\"https://en.wikipedia.org/wiki/Billboard_200\"><em>Billboard</em>&nbsp;200</a>, which all consecutively debuted at number one on the chart making him the only artist to achieve this,<sup id=\"cite_ref-CcoQ7_6-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Eminem#cite_note-CcoQ7-6\">[6]</a></sup>&nbsp;and five number-one singles on the&nbsp;<a title=\"Billboard Hot 100\" href=\"https://en.wikipedia.org/wiki/Billboard_Hot_100\"><em>Billboard</em>&nbsp;Hot 100</a>.<sup id=\"cite_ref-:1_7-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Eminem#cite_note-:1-7\">[7]</a></sup></p>\n\n      </td>\n    </tr>\n  </table>\n</div>\n\n\n\n\n\n\n\n\n\n<div class=\"show-container show-container-partial\">\n  <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n    <tr>\n      <td class=\"section section-partial body-copy\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n          <tr>\n            <td class=\"tag-outer\">\n              <table align=\"left\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"\n                style=\"display: inline-block; border-collapse: collapse;\">\n                <tr>\n                  <td class=\"tag-inner\" style=\"color: #ffffff;\">MMA</td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n\n        <h1>\n          <font color=\"#000000\">Mixed Martial Arts</font>\n        </h1>\n\n        <p><strong>Mixed martial arts</strong>&nbsp;(<strong>MMA</strong>) sometimes referred to as&nbsp;<strong>cage fighting</strong>,<sup id=\"cite_ref-1\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-1\">[1]</a></sup>&nbsp;is a full-contact&nbsp;<a title=\"Combat sport\" href=\"https://en.wikipedia.org/wiki/Combat_sport\">combat sport</a>&nbsp;based on&nbsp;<a title=\"Strike (attack)\" href=\"https://en.wikipedia.org/wiki/Strike_(attack)\">striking</a>,&nbsp;<a title=\"Grappling\" href=\"https://en.wikipedia.org/wiki/Grappling\">grappling</a>&nbsp;and&nbsp;<a title=\"Ground fighting\" href=\"https://en.wikipedia.org/wiki/Ground_fighting\">ground fighting</a>, incorporating techniques from various combat sports and&nbsp;<a title=\"Martial arts\" href=\"https://en.wikipedia.org/wiki/Martial_arts\">martial arts</a>&nbsp;from around the world.<sup id=\"cite_ref-Mixed_martial_arts_2-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-Mixed_martial_arts-2\">[2]</a></sup>&nbsp;The first documented use of the term&nbsp;<em>mixed martial arts</em>&nbsp;was in a review of&nbsp;<a title=\"UFC 1\" href=\"https://en.wikipedia.org/wiki/UFC_1\">UFC 1</a>&nbsp;by television critic&nbsp;<a title=\"Howard Rosenberg\" href=\"https://en.wikipedia.org/wiki/Howard_Rosenberg\">Howard Rosenberg</a>&nbsp;in 1993.<sup id=\"cite_ref-autogenerated1993_3-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-autogenerated1993-3\">[3]</a></sup>&nbsp;The question of who actually coined the term is subject to debate.<sup id=\"cite_ref-KirikJenness_4-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-KirikJenness-4\">[4]</a></sup></p>\r\n<p>During the early 20th century, various interstylistic contests took place throughout&nbsp;<a title=\"Japan\" href=\"https://en.wikipedia.org/wiki/Japan\">Japan</a>&nbsp;and in the countries of the&nbsp;<a title=\"Four Asian Tigers\" href=\"https://en.wikipedia.org/wiki/Four_Asian_Tigers\">Four Asian Tigers</a>. In&nbsp;<a title=\"Brazil\" href=\"https://en.wikipedia.org/wiki/Brazil\">Brazil</a>, there was the sport of&nbsp;<a title=\"Vale Tudo\" href=\"https://en.wikipedia.org/wiki/Vale_Tudo\">Vale Tudo</a>, in which fighters from various styles fought with little to no rules. The&nbsp;<a title=\"Gracie family\" href=\"https://en.wikipedia.org/wiki/Gracie_family\">Gracie family</a>&nbsp;was known to promote&nbsp;<em>Vale Tudo</em>&nbsp;matches as a way to promote their own&nbsp;<a title=\"Brazilian jiu-jitsu\" href=\"https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu\">Brazilian jiu-jitsu</a>&nbsp;style.<sup id=\"cite_ref-ReferenceA_5-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-ReferenceA-5\">[5]</a></sup>&nbsp;An early high-profile mixed martial arts&nbsp;<a title=\"Masahiko Kimura vs. H&eacute;lio Gracie\" href=\"https://en.wikipedia.org/wiki/Masahiko_Kimura_vs._H%C3%A9lio_Gracie\">bout</a>&nbsp;was fought in 1951, between the&nbsp;<a class=\"mw-redirect\" title=\"Judoka\" href=\"https://en.wikipedia.org/wiki/Judoka\">judoka</a>&nbsp;<a title=\"Masahiko Kimura\" href=\"https://en.wikipedia.org/wiki/Masahiko_Kimura\">Masahiko Kimura</a>&nbsp;and Brazilian jiu-jitsu founder&nbsp;<a title=\"H&eacute;lio Gracie\" href=\"https://en.wikipedia.org/wiki/H%C3%A9lio_Gracie\">H&eacute;lio Gracie</a>&nbsp;in Brazil. In the West, the concept of combining elements of multiple martial arts was popularized by&nbsp;<a title=\"Bruce Lee\" href=\"https://en.wikipedia.org/wiki/Bruce_Lee\">Bruce Lee</a>'s&nbsp;<a title=\"Jeet Kune Do\" href=\"https://en.wikipedia.org/wiki/Jeet_Kune_Do\">Jeet Kune Do</a>&nbsp;during the late 1960s to early 1970s. A precursor to modern MMA was the 1976&nbsp;<a title=\"Muhammad Ali vs. Antonio Inoki\" href=\"https://en.wikipedia.org/wiki/Muhammad_Ali_vs._Antonio_Inoki\">Muhammad Ali vs. Antonio Inoki</a>&nbsp;bout, fought between boxer&nbsp;<a title=\"Muhammad Ali\" href=\"https://en.wikipedia.org/wiki/Muhammad_Ali\">Muhammad Ali</a>&nbsp;and wrestler&nbsp;<a title=\"Antonio Inoki\" href=\"https://en.wikipedia.org/wiki/Antonio_Inoki\">Antonio Inoki</a>&nbsp;in Japan, where it later inspired the foundation of&nbsp;<a title=\"Pancrase\" href=\"https://en.wikipedia.org/wiki/Pancrase\">Pancrase</a>&nbsp;in 1993 and&nbsp;<a title=\"Pride Fighting Championships\" href=\"https://en.wikipedia.org/wiki/Pride_Fighting_Championships\">Pride Fighting Championships</a>&nbsp;in 1997.</p>\r\n<p>In 1980,&nbsp;<a title=\"CV Productions, Inc.\" href=\"https://en.wikipedia.org/wiki/CV_Productions,_Inc.\">CV Productions, Inc.</a>&nbsp;created the first regulated MMA league in the United States, called&nbsp;<em>Tough Guy Contest</em>, which was later renamed&nbsp;<em>Battle of the Superfighters</em>. The company sanctioned ten tournaments in&nbsp;<a title=\"Pennsylvania\" href=\"https://en.wikipedia.org/wiki/Pennsylvania\">Pennsylvania</a>. However, in 1983 the&nbsp;<a title=\"Pennsylvania State Senate\" href=\"https://en.wikipedia.org/wiki/Pennsylvania_State_Senate\">Pennsylvania State Senate</a>&nbsp;passed a bill prohibiting the sport.<sup id=\"cite_ref-NashJohn_6-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-NashJohn-6\">[6]</a></sup><sup id=\"cite_ref-WernerSam_7-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-WernerSam-7\">[7]</a></sup>&nbsp;In 1993, the&nbsp;<a title=\"Gracie family\" href=\"https://en.wikipedia.org/wiki/Gracie_family\">Gracie family</a>&nbsp;brought Brazilian jiu-jitsu, developed in Brazil from the 1920s, to the United States by founding the&nbsp;<a title=\"Ultimate Fighting Championship\" href=\"https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship\">Ultimate Fighting Championship</a>&nbsp;(UFC) MMA promotion company in 1993. The company held an event with almost no rules, mostly due to the influence of&nbsp;<a title=\"Art Davie\" href=\"https://en.wikipedia.org/wiki/Art_Davie\">Art Davie</a>&nbsp;and&nbsp;<a title=\"Rorion Gracie\" href=\"https://en.wikipedia.org/wiki/Rorion_Gracie\">Rorion Gracie</a>&nbsp;attempting to replicate Vale Tudo fights that existed in Brazil<sup id=\"cite_ref-ReferenceA_5-1\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-ReferenceA-5\">[5]</a></sup>&nbsp;and would later implement a different set of rules (example: eliminating kicking a grounded opponent), which differed from other leagues which were more in favour of realistic fights.<sup id=\"cite_ref-MixedMartialArts.com_8-0\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Mixed_martial_arts#cite_note-MixedMartialArts.com-8\">[8]</a></sup></p>\n\n      </td>\n    </tr>\n  </table>\n</div>\n\n\n\n\n\n\n\n\n\n<div class=\"show-container show-container-partial\">\n  <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n    <tr>\n      <td class=\"section section-partial body-copy\">\n        <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse: collapse;\">\n          <tr>\n            <td class=\"tag-outer\">\n              <table align=\"left\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"\n                style=\"display: inline-block; border-collapse: collapse;\">\n                <tr>\n                  <td class=\"tag-inner\" style=\"color: #ffffff;\">GAME</td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n\n        <h1>\n          <font color=\"#000000\">Nintendo Entertainment System (NES)</font>\n        </h1>\n\n        <p>The&nbsp;<strong>Nintendo Entertainment System</strong>&nbsp;(<strong>NES</strong>) is an&nbsp;<a class=\"mw-redirect\" title=\"8-bit\" href=\"https://en.wikipedia.org/wiki/8-bit\">8-bit</a>&nbsp;<a title=\"Third generation of video game consoles\" href=\"https://en.wikipedia.org/wiki/Third_generation_of_video_game_consoles\">third-generation</a>&nbsp;<a title=\"Home video game console\" href=\"https://en.wikipedia.org/wiki/Home_video_game_console\">home video game console</a>&nbsp;produced by&nbsp;<a title=\"Nintendo\" href=\"https://en.wikipedia.org/wiki/Nintendo\">Nintendo</a>. Nintendo first released it in Japan as the&nbsp;<strong>Family Computer</strong>,<sup id=\"cite_ref-11\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Nintendo_Entertainment_System#cite_note-11\">[a]</a></sup>&nbsp;commonly known as the&nbsp;<strong>Famicom</strong>,<sup id=\"cite_ref-12\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Nintendo_Entertainment_System#cite_note-12\">[b]</a></sup>&nbsp;in 1983. The NES, a remodelled version, was released internationally in the following years.</p>\r\n<p>The NES featured a number of groundbreaking games, such as the platform game&nbsp;<em><a title=\"Super Mario Bros.\" href=\"https://en.wikipedia.org/wiki/Super_Mario_Bros.\">Super Mario Bros</a>,</em>&nbsp;the action-adventure game&nbsp;<em><a title=\"The Legend of Zelda (video game)\" href=\"https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)\">The Legend of Zelda</a></em>&nbsp;and the action game&nbsp;<em><a title=\"Metroid\" href=\"https://en.wikipedia.org/wiki/Metroid\">Metroid</a>.</em>&nbsp;As one of the&nbsp;<a class=\"mw-redirect\" title=\"List of million-selling game consoles\" href=\"https://en.wikipedia.org/wiki/List_of_million-selling_game_consoles\">best-selling gaming consoles</a>&nbsp;of its time, the NES helped revitalize the US video game industry following the&nbsp;<a title=\"Video game crash of 1983\" href=\"https://en.wikipedia.org/wiki/Video_game_crash_of_1983\">video game crash of 1983</a>.<sup id=\"cite_ref-13\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Nintendo_Entertainment_System#cite_note-13\">[11]</a></sup>&nbsp;Nintendo introduced a now-standard&nbsp;<a title=\"Business model\" href=\"https://en.wikipedia.org/wiki/Business_model\">business model</a>&nbsp;of licensing&nbsp;<a title=\"Video game developer\" href=\"https://en.wikipedia.org/wiki/Video_game_developer\">third-party developers</a>&nbsp;to produce and distribute games for the NES.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Nintendo_Entertainment_System#cite_note-14\">[12]</a></sup>&nbsp;The NES was succeeded by the&nbsp;<a title=\"Super Nintendo Entertainment System\" href=\"https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System\">Super Nintendo Entertainment System</a>.</p>\n\n      </td>\n    </tr>\n  </table>\n</div>\n\n\n\n\n\n\n\n\n\n"], ["updated_at", "2020-11-19 22:21:44.355694"], ["id", 26]]
+  ↳ app/controllers/newsletters_controller.rb:55
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:55
+Redirected to http://localhost:3000/newsletters/26
+Completed 302 Found in 629ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/newsletters/26" for ::1 at 2020-11-19 17:21:44 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mNewsletter Load (2.1ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/_story.html.erb (1.1ms)
+  Rendered newsletters/_story.html.erb (0.2ms)
+  Rendered newsletters/_story.html.erb (0.3ms)
+  Rendered newsletters/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 98ms (Views: 84.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/newsletters/26" for ::1 at 2020-11-19 17:23:19 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mNewsletter Load (4.0ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (6.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/_story.html.erb (4.2ms)
+  Rendered newsletters/_story.html.erb (1.3ms)
+  Rendered newsletters/_story.html.erb (0.5ms)
+  Rendered newsletters/show.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 219ms (Views: 194.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:24:35 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (3.5ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 281ms (Views: 271.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:25:05 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (3.3ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 233ms (Views: 225.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:25:22 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.7ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 256ms (Views: 245.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/newsletters/26" for ::1 at 2020-11-19 17:25:28 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mNewsletter Load (1.8ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (3.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/_story.html.erb (2.8ms)
+  Rendered newsletters/_story.html.erb (0.4ms)
+  Rendered newsletters/_story.html.erb (0.4ms)
+  Rendered newsletters/show.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 178ms (Views: 156.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:25:55 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (3.4ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 199ms (Views: 192.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:26:02 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (17.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 163ms (Views: 140.9ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/stories/new" for ::1 at 2020-11-19 17:26:04 -0500
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (7.1ms)
+  Rendered stories/new.html.erb within layouts/application (196.5ms)
+Completed 200 OK in 272ms (Views: 268.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:27:33 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (1.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 99ms (Views: 94.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:27:35 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (5.9ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 226ms (Views: 213.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:27:37 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (2.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 229ms (Views: 221.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:27:39 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.5ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 259ms (Views: 247.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-19 17:27:40 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  [1m[36mStory Load (4.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:27
+  Rendered stories/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 147ms (Views: 136.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:27:41 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.6ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 243ms (Views: 232.7ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 17:27:47 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-27"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[36mNewsletter Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 27, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[36mNewsletter Create (3.3ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 27, 2020"], ["html", ""], ["created_at", "2020-11-19 22:27:47.294867"], ["updated_at", "2020-11-19 22:27:47.294867"]]
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:27
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 16.8ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/newsletters_controller.rb:37:in `create'
+
+Started POST "/__better_errors/95dc64d2397bcc25/variables" for ::1 at 2020-11-19 17:27:47 -0500
+Started POST "/__better_errors/95dc64d2397bcc25/eval" for ::1 at 2020-11-19 17:28:18 -0500
+Started POST "/__better_errors/95dc64d2397bcc25/eval" for ::1 at 2020-11-19 17:28:38 -0500
+Started GET "/newsletters" for ::1 at 2020-11-19 17:29:38 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.2ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 201ms (Views: 135.0ms | ActiveRecord: 22.3ms)
+
+
+Started DELETE "/newsletters/27" for ::1 at 2020-11-19 17:29:49 -0500
+Processing by NewslettersController#destroy as HTML
+  Parameters: {"id"=>"27"}
+Can't verify CSRF token authenticity.
+  [1m[36mNewsletter Load (1.4ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:72
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.3ms)
+
+
+
+TypeError - no implicit conversion of nil into String:
+  app/controllers/newsletters_controller.rb:73:in `destroy'
+
+Started POST "/__better_errors/bc88d231676d943b/variables" for ::1 at 2020-11-19 17:29:49 -0500
+Started GET "/newsletters/27" for ::1 at 2020-11-19 17:29:58 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mNewsletter Load (3.4ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (6.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 324ms (Views: 155.3ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/newsletters/27" for ::1 at 2020-11-19 17:30:03 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mNewsletter Load (1.1ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (4.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 213ms (Views: 180.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:30:54 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (10.0ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 280ms (Views: 263.2ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 17:30:57 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-19"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendered newsletters/_story.html.erb (2.6ms)
+  Rendered newsletters/_story.html.erb (0.2ms)
+  Rendered newsletters/_story.html.erb (0.4ms)
+  [1m[35m (7.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[36mNewsletter Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 19, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/newsletters_controller.rb:27
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.6ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 264ms (Views: 191.3ms | ActiveRecord: 20.5ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 17:31:02 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-20"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[36mNewsletter Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 20, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[36mNewsletter Create (1.6ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 20, 2020"], ["html", ""], ["created_at", "2020-11-19 22:31:02.569528"], ["updated_at", "2020-11-19 22:31:02.569528"]]
+  ↳ app/controllers/newsletters_controller.rb:27
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:27
+Completed 500 Internal Server Error in 268048ms (ActiveRecord: 10.4ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/newsletters_controller.rb:38:in `create'
+
+Started GET "/newsletters/27" for ::1 at 2020-11-19 17:35:30 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mNewsletter Load (0.6ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 85ms (Views: 70.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:35:36 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (1.7ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 160ms (Views: 115.5ms | ActiveRecord: 15.9ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-19 17:35:41 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-21"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 21, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[36mNewsletter Create (1.9ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 21, 2020"], ["html", "<h3 id='empty-table'>No stories found for this newsletter :(</h3>"], ["created_at", "2020-11-19 22:35:42.074586"], ["updated_at", "2020-11-19 22:35:42.074586"]]
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:31
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:43
+  [1m[36mNewsletter Exists (7.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 21, 2020"], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:43
+  [1m[36mNewsletter Update (0.8ms)[0m  [1m[33mUPDATE "newsletters" SET "updated_at" = $1, "lyraID" = $2 WHERE "newsletters"."id" = $3[0m  [["updated_at", "2020-11-19 22:35:46.283248"], ["lyraID", "sQ7wqMHQ9qoD8VLnuwh6xPV8"], ["id", 29]]
+  ↳ app/controllers/newsletters_controller.rb:43
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:43
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 4375ms (ActiveRecord: 48.7ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-19 17:35:46 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (0.8ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 79ms (Views: 75.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/newsletters/29" for ::1 at 2020-11-19 17:35:50 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mNewsletter Load (1.3ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (1.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 218ms (Views: 192.2ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mNewsletter Load (2.9ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters"[0m
+  [1m[36mNewsletter Load (1.6ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" ORDER BY "newsletters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNewsletter Destroy (1.5ms)[0m  [1m[31mDELETE FROM "newsletters" WHERE "newsletters"."id" = $1[0m  [["id", 20]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/newsletters" for ::1 at 2020-11-19 17:37:47 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (5.2ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 150ms (Views: 137.7ms | ActiveRecord: 6.8ms)
+
+
+  [1m[36mNewsletter Load (1.5ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStory Destroy (3.8ms)[0m  [1m[31mDELETE FROM "stories"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNewsletter Destroy (2.0ms)[0m  [1m[31mDELETE FROM "newsletters"[0m
+  ↳ db/seeds.rb:12

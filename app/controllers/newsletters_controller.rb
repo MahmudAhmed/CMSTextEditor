@@ -18,14 +18,16 @@ class NewslettersController < ApplicationController
   def create 
     @newsletter = Newsletter.new
     @newsletter.date = Date.parse(newsletters_param["date"]).strftime("%B %d, %Y")
-    @stories = @newsletter.get_stories
+    stories = @newsletter.get_stories
     html = ''
-    @stories.reverse_each do |story| 
-      html += render_to_string partial: "story", locals: {story: story}
+    if stories.empty?
+      html = "<h3 id='empty-table'>No stories found for this newsletter :(</h3>"
+    else 
+      stories.reverse_each do |story| 
+        html += render_to_string partial: "story", locals: {story: story}
+      end
     end
-
     @newsletter.html = html
-
     if @newsletter.save
       url = URI("https://lyra-api.herokuapp.com/api/newsletters")
       https = Net::HTTP.new(url.host, url.port);
@@ -35,6 +37,7 @@ class NewslettersController < ApplicationController
       request["Authorization"] = "Bearer WBktXBdQAGL717bfLaUMbRr2"
       form_data = [['date', @newsletter.date], ['html', @newsletter.html]]
       request.set_form form_data, 'multipart/form-data'
+      debugger
       response = https.request(request)
       @newsletter.lyraID = JSON.parse(response.body)["data"]["id"]
       @newsletter.save
