@@ -18381,3 +18381,14 @@ Processing by StoriesController#index as HTML
 Completed 200 OK in 180ms (Views: 173.0ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/stories" for ::1 at 2020-11-19 18:50:51 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:13
+  [1m[36mCACHE Story Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:20
+  Rendered stories/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 237ms (Views: 226.5ms | ActiveRecord: 1.8ms)
+
+

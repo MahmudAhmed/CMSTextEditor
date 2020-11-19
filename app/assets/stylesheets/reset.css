@@ -18,6 +18,9 @@ span, article, footer, time, small {
   background: transparent;
 } */
 
+body {
+  background-color: #f7fafc;
+}
 /* ul {
   list-style: none;
 }
