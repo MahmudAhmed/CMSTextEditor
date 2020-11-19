@@ -34,7 +34,7 @@ input[type=submit] {
 }
 
 .tinymce {
-  height: 70vw;
+  /* height: 70vw; */
 }
 
 #submit-btn {
@@ -49,9 +49,23 @@ input[type=submit] {
   color: white;
   cursor: pointer;
   font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
 }
 
 #submit-btn:hover {
   background-color: white;
   color: black;
+}
+
+.form-btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#errors {
+  padding: 5px 10px;
+  list-style: square;
+  color: red;
 }

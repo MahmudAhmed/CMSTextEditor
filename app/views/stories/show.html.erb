@@ -1,4 +1,3 @@
-<%= tinymce_assets %>
   <div class="show-container">
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
       <tr>
@@ -22,9 +21,17 @@
 
           <%= @story.body.html_safe %>
           
-          
-          <%#= text_area_tag :body, @story.body.html_safe, :class => "tinymce" %>
-          <%#= tinymce %>
+
+          <div class="show-page-buttons">
+            <a target="_self" href="<%= edit_story_url(@story.id) %>" id="submit-btn">Edit Story</a>
+            <form action="<%= story_url(@story.id) %>" method="POST" id="the-form">  
+              <input type="hidden" name="_method" value="DELETE" />
+              <div>
+                <button id="submit-btn">Delete Story</button>
+              </div>
+            </form>
+            <a target="_self" href="<%= stories_url %>" id="submit-btn">Go Home</a>
+          </div>
 
           <p class="p_btn-social">
             <a href="https://www.facebook.com" target="_blank"><img

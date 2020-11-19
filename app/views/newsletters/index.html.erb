@@ -1,0 +1,33 @@
+<div class="index-container">
+
+  <div class="section-title-container">
+    <h4 class="section-title">Recent Stories</h4>
+  </div>
+
+  <table id="index-table">
+    <tr>
+      <th>Newsletter</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <% @newsletters.each do |newsletter| %>
+        <tr>
+          <td><a href="<%=newsletter_url(newsletter.id)%>"><%= newsletter.date %></a></td>
+          <td><a target="_self" href="<%= edit_newsletter_url(newsletter.id) %>">Edit </a></td>
+          <td>
+            <form action="<%= newsletter_url(newsletter.id) %>" method="POST" id="the-form">  
+                <input type="hidden" name="_method" value="DELETE" />
+                <button id="delete-btn">Delete</button>
+            </form>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+
+  <div>
+    <form action="<%= newsletters_url %>" method="POST" id="the-form">  
+      <button id="submit-btn">Create New</button>
+    </form>
+  </div>
+</div>
+

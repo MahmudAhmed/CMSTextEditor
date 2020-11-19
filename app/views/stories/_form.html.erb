@@ -1,0 +1,39 @@
+<% if story.persisted? %>
+  <% action = story_url(story.id) %>
+  <% method_override = "PATCH" %>
+  <% btn_text = "Save Changes" %>
+
+<% else %>
+  <% action = stories_url %>
+  <% method_override = "POST" %>
+  <% btn_text = "Publish Story" %>
+
+<% end %>
+
+
+<form action="<%= action %>" method="POST" id="the-form">  
+  <input type="hidden" name="_method" value="<%= method_override %>" />
+
+  <ul class="from-errors">
+    <% story.errors.full_messages.each do |msg| %>
+      <li id="errors"><%= msg %></li>
+    <%end%>
+  </ul>
+  
+  <div>
+    <label>Title</label>
+    <input type="text" name="story[title]" value="<%= story.title%>">
+  </div>
+  <div>
+    <label>Tag </label>
+    <input type="text" name="story[tag]" value="<%= story.tag%>">
+  </div>
+  <div class="tinymce-container">
+      <%= text_area_tag "story[body]",story.body ? story.body : "", :class => "tinymce" %>
+      <%= tinymce %>
+  </div>
+  <div class="form-btns-container">
+    <a target="_self" href="<%= stories_url %>" id="submit-btn">Cancel</a>
+    <button id="submit-btn"><%= btn_text %></button>
+  </div>
+</form>
