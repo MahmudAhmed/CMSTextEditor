@@ -1,6 +1,9 @@
 # Mahmud Ahmed's Morningbrew Project
 ***
 
+To create a new story: Click "Start Writing" and start writing. Use the the TinyMCE text editor to add styling and utilize premium features such as power paste and more. 
+
+To create a newsletter: Select a date and click "Create New" and it will auto generate a newsletter with all the stories that were published on the specified date. To update newsletter on LyraAPI after posting a new stories, just click "Update".
 
 ## Technologies
 * Ruby on Rails
