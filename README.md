@@ -48,7 +48,10 @@ rails s
 
 * Lyra API is synced for any action that might take place in application. For example, if you DELETE a story in your application, it will also be deleted in Lyra.
 
-* Minimalist UI/UX & Optimized to fit all screen sizes. 
+* Minimalist UI/UX & Optimized to fit all screen sizes.
+
+* Roadie inline styling. 
+
 
 
 ## Preview/Mentions
