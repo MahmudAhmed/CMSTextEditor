@@ -105,3 +105,4 @@ Syncs with LyraAPI, with inline styling.
 ## Future Endeavors
 
 * CSS Styling
+* Integrate React as View Layer
