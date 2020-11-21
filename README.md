@@ -89,7 +89,7 @@ newsletters/:id "index"
   <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
 </p>
 
-* Select a date and it will auto generate a newsletter with all the stories that were published on the specfied date. To update LyraAPI after posting new stories, just click "Update"
+* Select a date and click "Create New" and it will auto-generate a newsletter with all the stories that were published on the specified date. To update the newsletter on LyraAPI after posting a new story, just click "Update".
 
 Syncs with LyraAPI, with inline styling. 
 
