@@ -60,10 +60,6 @@ stories/ "index"
 </p>
 
 
-<p align="center">
-  <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
-</p>
-
 stories/:id "show"
 
 <p align="center">
