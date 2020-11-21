@@ -14,10 +14,10 @@
 Postgres Database is required for HalalTables to operate correctly.
 
 ### Setting up
-Please run the following commands:
+Please run the following commands
 ```
 bundle install
-bundle exec rails db:create
+bundle exec rails dbcreate
 bundle exec rails db:migrate
 bundle exec rails db:seed
 ```
@@ -50,24 +50,24 @@ rails s
 
 ## Preview/Mentions
 
+* stories/ "index"
 
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/stories_index.png">
 </p>
 
-* stories/ ":index"
 
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
 </p>
 
-* stories/:id ":show"
+* stories/:id "show"
 
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/story_show.png">
 </p>
 
-* Custom Validations for form submission & stories/new ":new"
+* Custom Validations for form submission & stories/new "new"
 
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/validation-pt1.png">
@@ -81,13 +81,13 @@ rails s
   <img width="60%" height="100%" src="./app/assets/images/new_story.png">
 </p>
 
-* newsletters/:id ":index"
+* newsletters/:id "index"
 
 <p align="center">
-  <img width="60%" height="100%" src="./app/assets/images/newsletter_show.png">
+  <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
 </p>
 
- Select a date and it will auto generate a newsletter with all the stories that were published on the specfied date. To update LyraAPI after posting new stories, just click "Update".
+ Select a date and it will auto generate a newsletter with all the stories that were published on the specfied date. To update LyraAPI after posting new stories, just click "Update"
 
 * Syncs with LyraAPI, with inline styling. 
 
