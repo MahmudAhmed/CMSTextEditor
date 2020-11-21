@@ -22761,3 +22761,316 @@ Processing by NewslettersController#index as HTML
 Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/" for ::1 at 2020-11-21 18:11:25 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vault/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:12
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:19
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 952ms (Views: 934.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:16 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (3.2ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 98ms (Views: 50.7ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/newsletters/43" for ::1 at 2020-11-21 18:12:18 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mNewsletter Load (1.1ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (1.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered partials/_story.html.erb (0.8ms)
+  Rendered partials/_story.html.erb (0.2ms)
+  Rendered partials/_story.html.erb (0.5ms)
+  Rendered newsletters/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 57ms (Views: 46.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:26 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (2.1ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 109ms (Views: 102.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-21 18:12:29 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-21"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendered partials/_story.html.erb (0.8ms)
+  Rendered partials/_story.html.erb (0.1ms)
+  Rendered partials/_story.html.erb (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:34
+  [1m[36mNewsletter Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 21, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/newsletters_controller.rb:34
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (0.5ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 178ms (Views: 47.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/newsletters" for ::1 at 2020-11-21 18:12:34 -0500
+Processing by NewslettersController#create as HTML
+  Parameters: {"newsletter"=>{"date"=>"2020-11-23"}}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (2.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:34
+  [1m[36mNewsletter Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 LIMIT $2[0m  [["date", "November 23, 2020"], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:34
+  [1m[36mNewsletter Create (1.7ms)[0m  [1m[32mINSERT INTO "newsletters" ("date", "html", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "November 23, 2020"], ["html", "<h3 id=\"empty-table\" style=\"font-family:Helvetica, Arial, sans-serif;font-size:26px;color:#000000;font-weight:200;letter-spacing:2px;margin:0;padding:0\">No stories found for this newsletter :(</h3>"], ["created_at", "2020-11-21 23:12:34.693565"], ["updated_at", "2020-11-21 23:12:34.693565"]]
+  ↳ app/controllers/newsletters_controller.rb:34
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:45
+  [1m[36mNewsletter Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" WHERE "newsletters"."date" = $1 AND "newsletters"."id" != $2 LIMIT $3[0m  [["date", "November 23, 2020"], ["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:45
+  [1m[36mNewsletter Update (1.3ms)[0m  [1m[33mUPDATE "newsletters" SET "updated_at" = $1, "lyraID" = $2 WHERE "newsletters"."id" = $3[0m  [["updated_at", "2020-11-21 23:12:34.939584"], ["lyraID", "mxxmagnepWWE1XXYHzGs6w2e"], ["id", 44]]
+  ↳ app/controllers/newsletters_controller.rb:45
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:45
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 326ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:35 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (1.1ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/newsletters/44" for ::1 at 2020-11-21 18:12:38 -0500
+Processing by NewslettersController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mNewsletter Load (1.2ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:12
+  [1m[36mStory Load (4.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/models/newsletter.rb:7
+  Rendering newsletters/show.html.erb within layouts/application
+  Rendered newsletters/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 82ms (Views: 72.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:42 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (0.7ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-21 18:12:48 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:12
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:19
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/stories/61" for ::1 at 2020-11-21 18:12:50 -0500
+Processing by StoriesController#destroy as HTML
+  Parameters: {"id"=>"61"}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:70
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:81
+  [1m[36mStory Destroy (1.7ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = $1[0m  [["id", 61]]
+  ↳ app/controllers/stories_controller.rb:81
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:81
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 217ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-21 18:12:50 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:12
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:19
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 80ms (Views: 76.6ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/stories/59" for ::1 at 2020-11-21 18:12:51 -0500
+Processing by StoriesController#destroy as HTML
+  Parameters: {"id"=>"59"}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:70
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:81
+  [1m[36mStory Destroy (1.9ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = $1[0m  [["id", 59]]
+  ↳ app/controllers/stories_controller.rb:81
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:81
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 187ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-21 18:12:51 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:12
+  [1m[36mCACHE Story Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:19
+  [1m[36mStory Load (1.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 110ms (Views: 99.0ms | ActiveRecord: 5.0ms)
+
+
+Started DELETE "/stories/60" for ::1 at 2020-11-21 18:12:52 -0500
+Processing by StoriesController#destroy as HTML
+  Parameters: {"id"=>"60"}
+Can't verify CSRF token authenticity.
+  [1m[36mStory Load (1.3ms)[0m  [1m[34mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/stories_controller.rb:70
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/stories_controller.rb:81
+  [1m[36mStory Destroy (3.7ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = $1[0m  [["id", 60]]
+  ↳ app/controllers/stories_controller.rb:81
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/stories_controller.rb:81
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 175ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/stories" for ::1 at 2020-11-21 18:12:52 -0500
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:12
+  [1m[36mCACHE Story Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "stories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/stories/index.html.erb:19
+  Rendered stories/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:53 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (1.1ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/newsletters/44" for ::1 at 2020-11-21 18:12:55 -0500
+Processing by NewslettersController#destroy as HTML
+  Parameters: {"id"=>"44"}
+Can't verify CSRF token authenticity.
+  [1m[36mNewsletter Load (1.0ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:79
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:87
+  [1m[36mNewsletter Destroy (0.4ms)[0m  [1m[31mDELETE FROM "newsletters" WHERE "newsletters"."id" = $1[0m  [["id", 44]]
+  ↳ app/controllers/newsletters_controller.rb:87
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:87
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 167ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:55 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  [1m[36mNewsletter Load (1.8ms)[0m  [1m[34mSELECT "newsletters".* FROM "newsletters" ORDER BY "newsletters"."date" DESC[0m
+  ↳ app/views/newsletters/index.html.erb:34
+  Rendered newsletters/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 82ms (Views: 74.7ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/newsletters/43" for ::1 at 2020-11-21 18:12:55 -0500
+Processing by NewslettersController#destroy as HTML
+  Parameters: {"id"=>"43"}
+Can't verify CSRF token authenticity.
+  [1m[36mNewsletter Load (3.0ms)[0m  [1m[34mSELECT  "newsletters".* FROM "newsletters" WHERE "newsletters"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/newsletters_controller.rb:79
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/newsletters_controller.rb:87
+  [1m[36mNewsletter Destroy (2.5ms)[0m  [1m[31mDELETE FROM "newsletters" WHERE "newsletters"."id" = $1[0m  [["id", 43]]
+  ↳ app/controllers/newsletters_controller.rb:87
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/newsletters_controller.rb:87
+Redirected to http://localhost:3000/newsletters
+Completed 302 Found in 314ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/newsletters" for ::1 at 2020-11-21 18:12:56 -0500
+Processing by NewslettersController#index as HTML
+  Rendering newsletters/index.html.erb within layouts/application
+  [1m[36mNewsletter Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:22
+  [1m[36mCACHE Newsletter Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "newsletters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/newsletters/index.html.erb:27
+  Rendered newsletters/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
