@@ -96,7 +96,7 @@ rails s
 </p>
 
 <p align="center">
-  <img width="60%" height="100%" src="./app/assets/images/lyri_newsletter.png">
+  <img width="60%" height="100%" src="./app/assets/images/lyra_newsletter.png">
 </p>
 
 
