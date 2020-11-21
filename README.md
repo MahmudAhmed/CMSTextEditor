@@ -1,5 +1,7 @@
 # Mahmud Ahmed's Morningbrew Project
 ***
+
+
 ## Technologies
 * Ruby on Rails
 * PostgreSQL
@@ -48,30 +50,53 @@ rails s
 
 ## Preview/Mentions
 
+
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/stories_index.png">
+</p>
+
+* stories/ ":index"
+
+<p align="center">
+  <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
+</p>
+
+* stories/:id ":show"
+
+<p align="center">
+  <img width="60%" height="100%" src="./app/assets/images/story_show.png">
+</p>
+
+* Custom Validations for form submission & stories/new ":new"
+
+<p align="center">
+  <img width="60%" height="100%" src="./app/assets/images/validation-pt1.png">
+</p>
+
+<p align="center">
+  <img width="60%" height="100%" src="./app/assets/images/validation-pt2.png">
 </p>
 
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/new_story.png">
 </p>
 
-* Validations for form submitions
-
-<p align="center">
-  <img width="60%" height="100%" src="./app/assets/images/story_show.png">
-</p>
-
-<p align="center">
-  <img width="60%" height="100%" src="./app/assets/images/newsletter_index.png">
-</p>
+* newsletters/:id ":index"
 
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/newsletter_show.png">
 </p>
 
+ Select a date and it will auto generate a newsletter with all the stories that were published on the specfied date. To update LyraAPI after posting new stories, just click "Update".
+
+* Syncs with LyraAPI, with inline styling. 
+
 <p align="center">
   <img width="60%" height="100%" src="./app/assets/images/lyri.png">
+</p>
+
+<p align="center">
+  <img width="60%" height="100%" src="./app/assets/images/lyri_newsletter.png">
 </p>
 
 

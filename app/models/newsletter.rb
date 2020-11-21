@@ -8,6 +8,7 @@ class Newsletter < ApplicationRecord
   end
 
   
+  
 
 end 
 

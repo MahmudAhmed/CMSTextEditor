@@ -30,6 +30,7 @@ gem 'pry-rails'
 gem 'jquery-rails'
 gem 'annotate'
 gem 'tinymce-rails'
+gem 'roadie', '~> 4.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

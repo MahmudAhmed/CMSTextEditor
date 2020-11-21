@@ -20,7 +20,7 @@
     <tr>
       <th>Newsletter</th>
       <% if !@newsletters.empty? %>
-        <th title="Post Changes on LyraAPI">LyraAPI</th>
+        <th>LyraAPI</th>
         <th>Delete</th>
       <% end %>
     </tr>
@@ -33,11 +33,11 @@
     <% else %>
       <% @newsletters.each do |newsletter| %>
         <tr>
-          <td><a href="<%=newsletter_url(newsletter.id)%>"><%= newsletter.date %></a></td>
+          <td><a class="remove-ancor-decor" href="<%=newsletter_url(newsletter.id)%>"><%= newsletter.date %></a></td>
           <td>
             <form action="<%= newsletter_url(newsletter.id) %>" method="POST" id="the-form"> 
               <input type="hidden" name="_method" value="PATCH" />
-              <button id="delete-btn">Update</button>
+              <button id="delete-btn" title="Post Changes on LyraAPI">Update</button>
             </form>          
           </td>
           <td>

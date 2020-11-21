@@ -1,5 +1,4 @@
 <div class="index-container">
-
   <div class="section-title-container">
     <h4 class="section-title">Recent Stories</h4>
     <div>
@@ -26,8 +25,8 @@
     <% else %>
       <% @stories.reverse_each do |story| %>
           <tr>
-            <td><a href="<%=story_url(story.id)%>"><%= story.title %></a></td>
-            <td><a target="_self" href="<%= edit_story_url(story.id) %>">Edit </a></td>
+            <td><a class="remove-ancor-decor" href="<%=story_url(story.id)%>"><%= story.title %></a></td>
+            <td><a class="remove-ancor-decor" target="_self" href="<%= edit_story_url(story.id) %>">Edit </a></td>
             <td>
               <form action="<%= story_url(story.id) %>" method="POST" id="the-form">  
                   <input type="hidden" name="_method" value="DELETE" />

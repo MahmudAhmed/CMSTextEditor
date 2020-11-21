@@ -24,6 +24,7 @@ class StoriesController < ApplicationController
     if @story.save
       @story.tag.upcase! 
       @story.published_date = Time.now.strftime("%B %d, %Y")
+      @story.set_css
       url = URI("https://lyra-api.herokuapp.com/api/stories")
       https = Net::HTTP.new(url.host, url.port);
       https.use_ssl = true

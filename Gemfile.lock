@@ -83,6 +83,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    css_parser (1.7.1)
+      addressable
     debug_inspector (0.0.3)
     erubi (1.10.0)
     execjs (2.7.0)
@@ -158,6 +160,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.8.2)
+    roadie (4.0.0)
+      css_parser (~> 1.4)
+      nokogiri (~> 1.8)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
     sass (3.7.4)
@@ -227,6 +232,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.1)
+  roadie (~> 4.0)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

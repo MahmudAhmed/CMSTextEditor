@@ -24,10 +24,13 @@ class NewslettersController < ApplicationController
       html = "<h3 id='empty-table'>No stories found for this newsletter :(</h3>"
     else 
       stories.reverse_each do |story| 
-        html += render_to_string partial: "story", locals: {story: story}
+        html += render_to_string partial: "partials/story", locals: {story: story}
       end
     end
-    @newsletter.html = html
+    roadie_doc = Roadie::Document.new(html)
+    roadie_doc.add_css(Story.get_css)
+    @newsletter.html = roadie_doc.transform_partial
+
     if @newsletter.save
       url = URI("https://lyra-api.herokuapp.com/api/newsletters")
       https = Net::HTTP.new(url.host, url.port);
@@ -52,10 +55,11 @@ class NewslettersController < ApplicationController
     @stories = @newsletter.get_stories
     html = ''
     @stories.reverse_each do |story| 
-      html += render_to_string partial: "story", locals: {story: story}
+      html += render_to_string partial: "partials/story", locals: {story: story}
     end
-
-    @newsletter.html = html
+    roadie_doc = Roadie::Document.new(html)
+    roadie_doc.add_css(Story.get_css)
+    @newsletter.html = roadie_doc.transform_partial
     if @newsletter.save
       url = URI("https://lyra-api.herokuapp.com/api/newsletters/" + @newsletter.lyraID)
       https = Net::HTTP.new(url.host, url.port);
