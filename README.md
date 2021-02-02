@@ -1,4 +1,4 @@
-# Mahmud Ahmed's Morningbrew Project
+# CMSTextEditor
 ***
 
 To create a new story: Click "Start Writing" and start writing. Use the TinyMCE text editor to add styling and utilize premium features such as power paste and more. 
